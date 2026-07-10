@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ghost Pilot — 폐루프 시뮬레이터</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.31.0/dist/tabler-icons.min.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0d0d10;--s1:#141418;--s2:#1c1c22;--s3:#23232c;--s4:#2a2a35;
+  --bd:#2e2e3a;--bd2:#3d3d50;
+  --tx:#e0e0f0;--tx2:#8888a8;--tx3:#4a4a68;
+  --red:#e05252;--rdb:#1e1010;--rdd:#3a1818;
+  --amb:#e8a020;--ambb:#1e1608;--ambd:#3a2c10;
+  --grn:#3ec87a;--grnb:#0c1a10;--grnd:#183020;
+  --blu:#4a8ee8;--blub:#0c1220;--blud:#182038;
+  --pur:#9b6cf0;--purb:#140e20;--purd:#261c3a;
+  --fn:'Consolas','SF Mono',monospace;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+}
+body{background:var(--bg);color:var(--tx);font-family:var(--sans);height:100vh;overflow:hidden;display:flex;flex-direction:column}
+.hdr{background:var(--s1);border-bottom:1px solid var(--bd);padding:9px 16px;display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:22px;height:22px;background:linear-gradient(135deg,var(--red),var(--pur));border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff}
+.htitle{font-size:13px;font-weight:600}
+.hright{margin-left:auto;display:flex;gap:6px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:4px;font-size:10px;padding:2px 8px;border-radius:3px;font-weight:500;border:1px solid;transition:all .3s}
+.pill-ws{background:var(--rdb);color:var(--red);border-color:var(--rdd)}
+.pill-ws.on{background:var(--grnb);color:var(--grn);border-color:var(--grnd)}
+.pill-atk{background:var(--rdb);color:var(--red);border-color:var(--rdd)}
+.pill-def{background:var(--grnb);color:var(--grn);border-color:var(--grnd)}
+.dot{width:5px;height:5px;border-radius:50%;display:inline-block;flex-shrink:0}
+.dr{background:var(--red);animation:blink 1s infinite}
+.dg{background:var(--grn)}
+.doff{background:var(--tx3)}
+.da{background:var(--amb)}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+.grid{display:grid;grid-template-columns:200px 1fr 255px;flex:1;overflow:hidden}
+.left{background:var(--s1);border-right:1px solid var(--bd);overflow-y:auto;display:flex;flex-direction:column}
+.sec{padding:9px 12px;border-bottom:1px solid var(--bd)}
+.slbl{font-size:8px;font-weight:700;letter-spacing:.9px;color:var(--tx3);text-transform:uppercase;margin-bottom:7px}
+.crow{display:flex;align-items:center;justify-content:space-between;margin-bottom:3px}
+.clbl{font-size:10px;color:var(--tx2)}
+.cval{font-size:10px;font-family:var(--fn);color:var(--tx);background:var(--s3);padding:1px 5px;border-radius:3px;min-width:38px;text-align:right}
+input[type=range]{width:100%;height:3px;-webkit-appearance:none;background:var(--bd2);border-radius:2px;outline:none;margin:3px 0 6px}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:11px;height:11px;border-radius:50%;background:var(--blu);cursor:pointer}
+select{width:100%;background:var(--s3);border:1px solid var(--bd2);color:var(--tx);padding:4px 7px;border-radius:3px;font-size:10px;outline:none;margin-bottom:6px}
+.brow{display:flex;gap:4px;flex-wrap:wrap}
+.btn{padding:5px 9px;border-radius:3px;font-size:10px;font-weight:500;cursor:pointer;border:1px solid var(--bd2);background:var(--s3);color:var(--tx);display:inline-flex;align-items:center;gap:3px;transition:background .12s}
+.btn:hover{background:var(--s4)}
+.btn-run{background:var(--blub);border-color:var(--blud);color:var(--blu)}
+.btn-run:hover{background:#0f1830}
+.btn:disabled{opacity:.3;cursor:not-allowed}
+.spdrow{display:flex;gap:3px;margin-bottom:7px;align-items:center}
+.spd{padding:2px 6px;font-size:9px;border-radius:3px;border:1px solid var(--bd2);background:var(--s3);color:var(--tx2);cursor:pointer}
+.spd.on{background:var(--blub);border-color:var(--blud);color:var(--blu)}
+.smg{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.smn{background:var(--s3);border:1px solid var(--bd);border-radius:4px;padding:5px 6px;text-align:center;transition:all .2s}
+.smn.oN{background:var(--grnb);border-color:var(--grnd)}
+.smn.oS{background:var(--ambb);border-color:var(--ambd)}
+.smn.oA{background:var(--rdb);border-color:var(--rdd)}
+.smn.oR{background:var(--purb);border-color:var(--purd)}
+.smn-name{font-size:8px;font-weight:700;color:var(--tx2)}
+.smn.oN .smn-name{color:var(--grn)}.smn.oS .smn-name{color:var(--amb)}.smn.oA .smn-name{color:var(--red)}.smn.oR .smn-name{color:var(--pur)}
+/* CENTER */
+.center{display:flex;flex-direction:column;overflow:hidden;border-right:1px solid var(--bd)}
+.prog{height:2px;background:var(--bd);overflow:hidden;flex-shrink:0}
+.progf{height:100%;background:linear-gradient(90deg,var(--blu),var(--pur));transition:width .1s}
+.mbar{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;padding:8px 10px;border-bottom:1px solid var(--bd);flex-shrink:0}
+.mc{background:var(--s2);border:1px solid var(--bd);border-radius:4px;padding:7px 9px}
+.mc-l{font-size:7px;color:var(--tx3);margin-bottom:2px;text-transform:uppercase;letter-spacing:.4px}
+.mc-v{font-size:16px;font-weight:600;font-family:var(--fn);line-height:1}
+.mc-s{font-size:8px;color:var(--tx2);margin-top:2px}
+.mc.cR .mc-v{color:var(--red)}.mc.cA .mc-v{color:var(--amb)}.mc.cG .mc-v{color:var(--grn)}.mc.cB .mc-v{color:var(--blu)}.mc.cP .mc-v{color:var(--pur)}
+/* 시각화 */
+.viz-top{display:grid;grid-template-columns:1fr 1fr;gap:0;flex-shrink:0;border-bottom:1px solid var(--bd);height:180px}
+.viz-bot{position:relative;overflow:hidden;flex-shrink:0;border-bottom:1px solid var(--bd);height:220px}
+.viz-panel{position:relative;overflow:hidden}
+.viz-panel:first-child{border-right:1px solid var(--bd)}
+.viz-title{position:absolute;top:0;left:0;right:0;padding:4px 9px;background:rgba(13,13,16,.88);backdrop-filter:blur(4px);font-size:8px;font-weight:600;color:var(--tx2);text-transform:uppercase;letter-spacing:.5px;display:flex;align-items:center;gap:5px;z-index:2}
+.vbadge{font-size:8px;padding:1px 5px;border-radius:2px;font-weight:600}
+.vb-map{background:var(--blub);color:var(--blu);border:1px solid var(--blud)}
+.vb-drone{background:var(--rdb);color:var(--red);border:1px solid var(--rdd)}
+.vb-form{background:var(--purb);color:var(--pur);border:1px solid var(--purd)}
+.charts-bot{flex:1;overflow-y:auto;padding:8px 10px;display:flex;flex-direction:column;gap:7px;min-height:0}
+.cc{background:var(--s2);border:1px solid var(--bd);border-radius:4px;padding:9px}
+.cc-t{font-size:8px;font-weight:600;color:var(--tx2);margin-bottom:6px;text-transform:uppercase;letter-spacing:.4px;display:flex;align-items:center;gap:4px}
+.tlwrap{padding:5px 10px 7px;background:var(--s2);border-top:1px solid var(--bd);flex-shrink:0}
+.tllbl{font-size:8px;color:var(--tx3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.tl{display:flex;gap:1px;overflow-x:auto;height:22px}
+.tlc{width:8px;flex-shrink:0;border-radius:2px;cursor:pointer}
+.tlc:hover{opacity:.7}
+/* RIGHT */
+.right{background:var(--s1);display:flex;flex-direction:column;overflow:hidden}
+.right-hdr{padding:9px 12px;border-bottom:1px solid var(--bd);flex-shrink:0;display:flex;align-items:center;gap:5px}
+.rtitle{font-size:8px;font-weight:700;letter-spacing:.8px;color:var(--red);text-transform:uppercase}
+.abox{margin:8px 12px;background:var(--rdb);border:1px solid var(--rdd);border-radius:4px;padding:8px 10px}
+.abox-t{font-size:8px;color:var(--red);font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin-bottom:6px;display:flex;align-items:center;gap:3px}
+.arow{display:flex;justify-content:space-between;align-items:center;margin-bottom:3px}
+.akey{font-size:9px;color:var(--tx2)}
+.aval{font-size:11px;font-family:var(--fn);font-weight:600}
+.adec{font-size:10px;font-weight:600;padding:4px 8px;border-radius:3px;text-align:center;margin-top:6px}
+.adec.bk{background:#2a1010;color:var(--red);border:1px solid var(--rdd)}
+.adec.ac{background:#0c1a10;color:var(--grn);border:1px solid var(--grnd)}
+.adec.id{background:var(--s3);color:var(--tx2);border:1px solid var(--bd)}
+.fbwrap{padding:6px 12px;border-bottom:1px solid var(--bd);flex-shrink:0}
+.fb-l{font-size:8px;color:var(--tx3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.fb-track{display:flex;gap:2px;align-items:flex-end;height:30px}
+.fb-bar{flex:1;border-radius:2px 2px 0 0;min-width:5px;transition:height .1s}
+.feed-hdr{padding:6px 12px;border-bottom:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center;flex-shrink:0}
+.feed-lbl{font-size:8px;color:var(--tx3);text-transform:uppercase;letter-spacing:.6px;font-weight:700}
+.feed-body{overflow-y:auto;flex:1}
+.fi{padding:5px 12px;border-bottom:1px solid #16161e;display:flex;gap:6px;align-items:flex-start}
+.fi:hover{background:#18181f}
+.fi-step{font-size:8px;color:var(--tx3);font-family:var(--fn);min-width:18px;padding-top:2px}
+.fi-ic{width:15px;height:15px;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:8px;flex-shrink:0;margin-top:1px}
+.ic-atk{background:var(--rdb);border:1px solid var(--rdd);color:var(--red)}
+.ic-def{background:var(--grnb);border:1px solid var(--grnd);color:var(--grn)}
+.ic-warn{background:var(--ambb);border:1px solid var(--ambd);color:var(--amb)}
+.ic-info{background:var(--blub);border:1px solid var(--blud);color:var(--blu)}
+.fi-body{flex:1;min-width:0}
+.fi-who{font-size:8px;font-weight:700;letter-spacing:.3px;text-transform:uppercase}
+.fw-atk{color:var(--red)}.fw-def{color:var(--grn)}.fw-warn{color:var(--amb)}.fw-info{color:var(--blu)}
+.fi-msg{font-size:9px;color:var(--tx2);margin-top:1px;line-height:1.4}
+.fi-tag{font-size:8px;font-family:var(--fn);color:var(--tx3);margin-top:1px}
+.arrow-row{display:flex;align-items:center;gap:4px;padding:3px 12px;background:var(--s2);border-bottom:1px solid #16161e}
+.arrow-msg{font-size:8px;color:var(--tx3);font-family:var(--fn)}
+.arrow-line{flex:1;height:1px;background:var(--bd2)}
+/* WS 상태 배너 */
+.ws-banner{padding:5px 12px;font-size:9px;text-align:center;display:none;flex-shrink:0}
+.ws-banner.show{display:block}
+.ws-banner.err{background:var(--rdb);color:var(--red)}
+.ws-banner.ok{background:var(--grnb);color:var(--grn)}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div class="logo">GP</div>
+  <div class="htitle">Ghost Pilot — 폐루프 시뮬레이터</div>
+  <div style="font-size:9px;color:var(--tx3);margin-left:4px">Python 백엔드 연동</div>
+  <div class="hdr-right hright">
+    <span class="pill pill-ws" id="ws-pill"><span class="dot doff" id="dot-ws"></span> 서버 연결 중...</span>
+    <span class="pill pill-atk" id="hdr-atk"><span class="dot doff" id="dot-atk-h"></span> 공격자 대기</span>
+    <span class="pill pill-def"><span class="dot dg"></span> 방어자 온라인</span>
+  </div>
+</div>
+
+<div class="ws-banner" id="ws-banner"></div>
+
+<div style="height:2px;background:var(--bd);overflow:hidden;flex-shrink:0">
+  <div class="progf" id="prog" style="width:0%"></div>
+</div>
+
+<div class="grid">
+<!-- LEFT -->
+<aside class="left">
+  <div class="sec">
+    <div class="slbl">방어 설정</div>
+    <select id="def-mode">
+      <option value="new">NEW — 다중신호 + 4상태</option>
+      <option value="old">OLD — 윈도우 + 무상태</option>
+    </select>
+    <div class="crow"><span class="clbl">드리프트 윈도우</span><span class="cval" id="v-win">20</span></div>
+    <input type="range" id="r-win" min="5" max="40" step="5" value="20">
+    <div class="crow"><span class="clbl">드리프트 임계값</span><span class="cval" id="v-thr">15m</span></div>
+    <input type="range" id="r-thr" min="5" max="40" step="1" value="15">
+    <div class="crow"><span class="clbl">히스테리시스 확증</span><span class="cval" id="v-cfm">3회</span></div>
+    <input type="range" id="r-cfm" min="1" max="8" step="1" value="3">
+  </div>
+  <div class="sec">
+    <div class="slbl">공격 설정</div>
+    <select id="atk-mode">
+      <option value="adaptive">적응형 (방어 반응 감지)</option>
+      <option value="fixed-slow">고정 느림 (0.5m/스텝)</option>
+      <option value="fixed-fast">고정 빠름 (3m/스텝)</option>
+      <option value="backoff">주기적 백오프</option>
+    </select>
+    <div class="crow"><span class="clbl">초기 스텝 크기</span><span class="cval" id="v-stp">1.0m</span></div>
+    <input type="range" id="r-stp" min="0.2" max="5" step="0.1" value="1.0">
+    <div class="crow"><span class="clbl">시뮬레이션 길이</span><span class="cval" id="v-len">80스텝</span></div>
+    <input type="range" id="r-len" min="20" max="120" step="10" value="80">
+  </div>
+  <div class="sec">
+    <div class="slbl">재생 속도</div>
+    <div class="spdrow">
+      <span style="font-size:8px;color:var(--tx3);margin-right:2px">간격</span>
+      <button class="spd" data-iv="1500">느림</button>
+      <button class="spd on" data-iv="500">보통</button>
+      <button class="spd" data-iv="150">빠름</button>
+      <button class="spd" data-iv="30">최대</button>
+    </div>
+    <div class="brow">
+      <button class="btn btn-run" id="btn-run" onclick="startSim()"><i class="ti ti-player-play"></i> 실행</button>
+      <button class="btn" id="btn-pause" onclick="togglePause()" disabled><i class="ti ti-player-pause"></i></button>
+      <button class="btn" id="btn-step" onclick="stepOnce()" disabled><i class="ti ti-step-into"></i></button>
+      <button class="btn" onclick="resetSim()"><i class="ti ti-refresh"></i></button>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="slbl">방어 상태 머신</div>
+    <div class="smg">
+      <div class="smn oN" id="sm-N"><div class="smn-name">NORMAL</div></div>
+      <div class="smn" id="sm-S"><div class="smn-name">SUSPICIOUS</div></div>
+      <div class="smn" id="sm-A"><div class="smn-name">ATTACK</div></div>
+      <div class="smn" id="sm-R"><div class="smn-name">RECOVERY</div></div>
+    </div>
+    <div style="font-size:8px;color:var(--tx3);margin-top:6px" id="sm-streak">이상 연속: 0 / 정상 연속: 0</div>
+  </div>
+  <div class="sec">
+    <div class="slbl">서버 정보</div>
+    <div style="font-size:9px;color:var(--tx2)" id="server-info">연결 대기중...</div>
+  </div>
+</aside>
+
+<!-- CENTER -->
+<div class="center">
+  <!-- 지표 바 -->
+  <div class="mbar">
+    <div class="mc cB"><div class="mc-l">스텝</div><div class="mc-v" id="m-step">0</div><div class="mc-s" id="m-step-s">/ 80</div></div>
+    <div class="mc" id="mc-cum"><div class="mc-l">누적 기만량</div><div class="mc-v" id="m-cum">0.0m</div><div class="mc-s">실제↔GCS 이탈</div></div>
+    <div class="mc" id="mc-win"><div class="mc-l">윈도우 드리프트</div><div class="mc-v" id="m-win">0.0m</div><div class="mc-s" id="m-thr-s">임계: 15m</div></div>
+    <div class="mc" id="mc-state"><div class="mc-l">방어 상태</div><div class="mc-v" style="font-size:11px" id="m-state">NORMAL</div><div class="mc-s" id="m-action">PASS</div></div>
+    <div class="mc cB"><div class="mc-l">MTTD</div><div class="mc-v" id="m-mttd">—</div><div class="mc-s">첫 탐지 스텝</div></div>
+  </div>
+
+  <!-- 시각화 상단: MAP + DRONE -->
+  <div class="viz-top">
+    <div class="viz-panel">
+      <div class="viz-title"><span class="vbadge vb-map">MAP</span> 실제 경로 vs GCS 인식</div>
+      <canvas id="map-cv" style="width:100%;height:100%;display:block"></canvas>
+    </div>
+    <div class="viz-panel">
+      <div class="viz-title"><span class="vbadge vb-drone" id="drone-badge">DRONE</span><span id="drone-title">드론 시점 — 정상 비행</span></div>
+      <canvas id="drone-cv" style="width:100%;height:100%;display:block"></canvas>
+    </div>
+  </div>
+
+  <!-- 시각화 하단: FORMATION 전체 너비 -->
+  <div class="viz-bot">
+    <div class="viz-title"><span class="vbadge vb-form">FORMATION</span><span id="form-title">편대 이탈 애니메이션 — 공격 대상 드론이 대형에서 벗어나는 장면</span></div>
+    <canvas id="form-cv" style="width:100%;height:100%;display:block"></canvas>
+  </div>
+
+  <!-- 차트 -->
+  <div class="charts-bot">
+    <div class="cc">
+      <div class="cc-t"><i class="ti ti-chart-line" style="font-size:10px"></i> 누적 기만량 · 윈도우 드리프트 · 탐지 구간</div>
+      <div style="position:relative;height:85px"><canvas id="c-main" role="img" aria-label="누적 기만량과 방어 탐지 타임라인"></canvas></div>
+    </div>
+    <div class="cc">
+      <div class="cc-t"><i class="ti ti-arrow-zigzag" style="font-size:10px"></i> 공격자 스텝 크기 (빨강=백오프 / 초록=가속 / 파랑=유지)</div>
+      <div style="position:relative;height:65px"><canvas id="c-step" role="img" aria-label="공격 스텝 크기 변화"></canvas></div>
+    </div>
+  </div>
+
+  <!-- 타임라인 -->
+  <div class="tlwrap">
+    <div class="tllbl">타임라인 — 클릭으로 이동</div>
+    <div class="tl" id="tl"></div>
+  </div>
+</div>
+
+<!-- RIGHT -->
+<aside class="right">
+  <div class="right-hdr">
+    <span class="dot doff" id="dot-atk"></span>
+    <span class="rtitle">공격자 실시간 판단</span>
+  </div>
+  <div class="abox">
+    <div class="abox-t"><i class="ti ti-crosshair" style="font-size:8px"></i> 공격 현황</div>
+    <div class="arow"><span class="akey">현재 스텝 크기</span><span class="aval" id="a-stp" style="color:var(--red)">—</span></div>
+    <div class="arow"><span class="akey">누적 주입량</span><span class="aval" id="a-cum" style="color:var(--amb)">—</span></div>
+    <div class="arow"><span class="akey">방어 탐지 여부</span><span class="aval" id="a-det" style="color:var(--tx2)">—</span></div>
+    <div class="arow"><span class="akey">백오프 횟수</span><span class="aval" id="a-bk" style="color:var(--tx2)">0</span></div>
+    <div class="adec id" id="a-decide">대기중</div>
+  </div>
+  <div class="fbwrap">
+    <div class="fb-l">공격 속도 vs 탐지 (최근 20스텝)</div>
+    <div class="fb-track" id="fb-track"></div>
+  </div>
+  <div class="feed-hdr">
+    <span class="feed-lbl"><i class="ti ti-messages" style="font-size:9px"></i> 공격↔방어 이벤트</span>
+    <button class="btn" onclick="clearFeed()" style="padding:2px 6px;font-size:9px"><i class="ti ti-trash"></i></button>
+  </div>
+  <div class="feed-body" id="feed-body"></div>
+</aside>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+// ══════════════════════════════════════════════
+// WebSocket 연결
+// ══════════════════════════════════════════════
+const WS_URL = `ws://${location.host}/ws`;
+let ws = null;
+let wsReady = false;
+let reconnectTimer = null;
+
+function connectWS() {
+  ws = new WebSocket(WS_URL);
+
+  ws.onopen = () => {
+    wsReady = true;
+    clearTimeout(reconnectTimer);
+    setWsPill(true);
+    ws.send(JSON.stringify({ cmd: 'ping' }));
+    fetch('/status').then(r => r.json()).then(s => {
+      document.getElementById('server-info').textContent =
+        `모드: ${s.offline_mode ? '내장 시뮬레이션' : '실제 방어 모듈'} | src: ${s.src_dir.split('/').slice(-2).join('/')}`;
+    }).catch(() => {});
+  };
+
+  ws.onmessage = (e) => {
+    const msg = JSON.parse(e.data);
+    handleMsg(msg);
+  };
+
+  ws.onerror = () => {};
+
+  ws.onclose = () => {
+    wsReady = false;
+    setWsPill(false);
+    reconnectTimer = setTimeout(connectWS, 2000);
+  };
+}
+
+function setWsPill(on) {
+  const p = document.getElementById('ws-pill');
+  const d = document.getElementById('dot-ws');
+  const b = document.getElementById('ws-banner');
+  if (on) {
+    p.className = 'pill pill-ws on';
+    p.innerHTML = '<span class="dot dg"></span> 서버 연결됨';
+    b.className = 'ws-banner ok show';
+    b.textContent = '✓ Python 백엔드 연결 완료 — 실제 방어 로직으로 실행됩니다';
+    setTimeout(() => b.className = 'ws-banner', 3000);
+  } else {
+    p.className = 'pill pill-ws';
+    p.innerHTML = '<span class="dot dr"></span> 서버 연결 끊김 — 재연결 중...';
+    b.className = 'ws-banner err show';
+    b.textContent = '⚠ 서버 연결 끊김. python server.py 실행 확인 후 잠시 기다려주세요.';
+  }
+}
+
+function sendWS(obj) {
+  if (ws && ws.readyState === WebSocket.OPEN) {
+    ws.send(JSON.stringify(obj));
+    return true;
+  }
+  return false;
+}
+
+// ══════════════════════════════════════════════
+// 시뮬 상태
+// ══════════════════════════════════════════════
+const BL = 37.5665, BLo = 126.978, DEC = 15;
+let simHistory = [];   // 수신된 스텝 데이터 축적
+let curView = 0;       // 현재 표시 중인 스텝 인덱스
+let totalSteps = 80;
+let mttd = null;
+let lastState = 'NORMAL', lastDet = false, lastDecide = '';
+const fbH = [];
+let running = false, paused = false;
+let stepInterval = 500;   // ms (서버 전송 간격)
+let autoTimer = null;
+let pendingSteps = [];    // 수신 버퍼
+
+// ── 메시지 핸들러 ──
+function handleMsg(msg) {
+  if (msg.type === 'started') {
+    totalSteps = msg.total;
+    document.getElementById('m-step-s').textContent = '/ ' + totalSteps;
+    addFeedRaw('▶ 시뮬레이션 시작 — Python 백엔드에서 실행 중', 'var(--tx3)');
+  }
+  else if (msg.type === 'step') {
+    pendingSteps.push(msg.data);
+  }
+  else if (msg.type === 'done') {
+    running = false;
+    document.getElementById('btn-run').disabled = false;
+    document.getElementById('btn-pause').disabled = true;
+    addFeedRaw(`■ 완료 — MTTD: ${msg.mttd ? msg.mttd + '스텝' : '미탐지'}`, 'var(--tx2)');
+  }
+  else if (msg.type === 'reset_ok') {
+    simHistory = []; curView = 0; mttd = null;
+    pendingSteps = [];
+  }
+  else if (msg.type === 'error') {
+    addFeedRaw('오류: ' + msg.msg, 'var(--red)');
+  }
+}
+
+// ── 렌더 루프 (requestAnimationFrame 기반) ──
+let rafId = null;
+function renderLoop() {
+  if (pendingSteps.length > 0) {
+    const r = pendingSteps.shift();
+    simHistory.push(r);
+    curView = simHistory.length;
+    applyStep(r);
+  }
+  rafId = requestAnimationFrame(renderLoop);
+}
+
+// ══════════════════════════════════════════════
+// UI 업데이트 (백엔드 데이터 수신)
+// ══════════════════════════════════════════════
+function applyStep(r) {
+  const pct = (r.step / totalSteps * 100).toFixed(1);
+  document.getElementById('prog').style.width = pct + '%';
+  document.getElementById('m-step').textContent = r.step;
+
+  // 지표
+  document.getElementById('mc-cum').className = 'mc ' + (r.cum_m > DEC ? 'cR' : r.cum_m > 8 ? 'cA' : 'cB');
+  document.getElementById('m-cum').textContent = r.cum_m.toFixed(1) + 'm';
+  document.getElementById('mc-win').className = 'mc ' + (r.win_det ? 'cR' : 'cB');
+  document.getElementById('m-win').textContent = r.win_m.toFixed(1) + 'm';
+  const SC = { NORMAL: 'cG', SUSPICIOUS: 'cA', ATTACK: 'cR', RECOVERY: 'cP' };
+  document.getElementById('mc-state').className = 'mc ' + (SC[r.state] || 'cB');
+  document.getElementById('m-state').textContent = r.state;
+  document.getElementById('m-action').textContent = r.action;
+  if (!mttd && r.detecting) {
+    mttd = r.step;
+    document.getElementById('m-mttd').textContent = r.step;
+    document.getElementById('m-mttd').style.color = 'var(--grn)';
+  }
+
+  // 4상태
+  const SN = { NORMAL: 'sm-N', SUSPICIOUS: 'sm-S', ATTACK: 'sm-A', RECOVERY: 'sm-R' };
+  const SC2 = { NORMAL: 'oN', SUSPICIOUS: 'oS', ATTACK: 'oA', RECOVERY: 'oR' };
+  Object.entries(SN).forEach(([s, id]) => document.getElementById(id).className = 'smn' + (r.state === s ? ' ' + SC2[s] : ''));
+  let aS = 0, cS = 0;
+  for (let i = simHistory.length - 1; i >= 0; i--) { if (simHistory[i].detecting) aS++; else break; }
+  for (let i = simHistory.length - 1; i >= 0; i--) { if (!simHistory[i].detecting) cS++; else break; }
+  document.getElementById('sm-streak').textContent = `이상 연속: ${aS} / 정상 연속: ${cS}`;
+
+  // 공격자 패널
+  document.getElementById('a-stp').textContent = r.spoof_step.toFixed(2) + 'm';
+  document.getElementById('a-cum').textContent = r.cum_m.toFixed(1) + 'm';
+  document.getElementById('a-det').textContent = r.detecting ? '탐지됨' : '미탐지';
+  document.getElementById('a-det').style.color = r.detecting ? 'var(--red)' : 'var(--grn)';
+  document.getElementById('a-bk').textContent = r.backoff_count + '회';
+  const ad = document.getElementById('a-decide');
+  if (r.atk_decide === 'backoff') { ad.textContent = '↓ 백오프 — 스텝 축소 중'; ad.className = 'adec bk'; }
+  else if (r.atk_decide === 'accel') { ad.textContent = '↑ 가속 — 스텝 증가 중'; ad.className = 'adec ac'; }
+  else { ad.textContent = '→ 고정 스텝 유지'; ad.className = 'adec id'; }
+
+  // 헤더
+  const ha = document.getElementById('hdr-atk');
+  if (r.detecting) {
+    ha.innerHTML = '<span class="dot da"></span> 공격자 백오프';
+    ha.style.cssText = 'background:var(--ambb);color:var(--amb);border-color:var(--ambd)';
+  } else {
+    ha.innerHTML = '<span class="dot dr"></span> 공격자 주입중';
+    ha.style.cssText = 'background:var(--rdb);color:var(--red);border-color:var(--rdd)';
+  }
+  const da = document.getElementById('dot-atk');
+  da.style.background = r.detecting ? 'var(--amb)' : 'var(--red)';
+  da.style.animation = r.detecting ? 'none' : 'blink 1s infinite';
+
+  // 드론 배지
+  const db = document.getElementById('drone-badge'), dt = document.getElementById('drone-title');
+  if (r.state === 'ATTACK') { db.style.cssText = 'background:var(--rdb);color:var(--red);border:1px solid var(--rdd)'; db.textContent = 'ATTACK'; dt.textContent = '드론 시점 — GPS 위조 확정'; }
+  else if (r.state === 'SUSPICIOUS') { db.style.cssText = 'background:var(--ambb);color:var(--amb);border:1px solid var(--ambd)'; db.textContent = 'ALERT'; dt.textContent = '드론 시점 — 이상 패턴 감지'; }
+  else if (r.state === 'RECOVERY') { db.style.cssText = 'background:var(--purb);color:var(--pur);border:1px solid var(--purd)'; db.textContent = 'RECOVER'; dt.textContent = '드론 시점 — 복구 검증 중'; }
+  else { db.style.cssText = 'background:var(--grnb);color:var(--grn);border:1px solid var(--grnd)'; db.textContent = 'NORMAL'; dt.textContent = '드론 시점 — 정상 비행'; }
+
+  // 피드백 미니바
+  fbH.push({ ss: r.spoof_step, det: r.detecting });
+  if (fbH.length > 20) fbH.shift();
+  const tr = document.getElementById('fb-track'); tr.innerHTML = '';
+  const mx = Math.max(...fbH.map(f => f.ss), 0.1);
+  fbH.forEach(f => { const b = document.createElement('div'); b.className = 'fb-bar'; b.style.height = Math.max(3, f.ss / mx * 28) + 'px'; b.style.background = f.det ? 'rgba(224,82,82,.75)' : 'rgba(62,200,122,.6)'; tr.appendChild(b); });
+
+  // 타임라인
+  const tl = document.getElementById('tl');
+  if (tl.children.length < r.step) {
+    const c = document.createElement('div'); c.className = 'tlc';
+    c.style.background = r.cum_m <= DEC ? '#2a2a35' : r.detecting ? '#183020' : '#2a1010';
+    c.title = `${r.step}: ${r.state} | ${r.cum_m.toFixed(1)}m`;
+    tl.appendChild(c); tl.scrollLeft = tl.scrollWidth;
+  }
+
+  pushFeed(r);
+  pushCharts(r);
+  drawMap(simHistory.length);
+  drawDroneView(r);
+  drawFormation(r);
+
+  lastState = r.state; lastDet = r.detecting; lastDecide = r.atk_decide;
+}
+
+// 이벤트 피드
+function pushFeed(r) {
+  const body = document.getElementById('feed-body');
+  const evts = [];
+  if (r.atk_decide !== lastDecide || r.step === 1) {
+    if (r.atk_decide === 'backoff') evts.push({ who: 'atk', ic: 'ic-atk', icon: 'ti-trending-down', wc: 'fw-atk', title: '공격자 — 백오프', msg: `탐지 감지 → 스텝 ${r.spoof_step.toFixed(2)}m로 축소`, tag: `누적 ${r.cum_m.toFixed(1)}m` });
+    else if (r.atk_decide === 'accel') evts.push({ who: 'atk', ic: 'ic-atk', icon: 'ti-trending-up', wc: 'fw-atk', title: '공격자 — 가속', msg: `미탐지 확인 → 스텝 ${r.spoof_step.toFixed(2)}m로 증가`, tag: `누적 ${r.cum_m.toFixed(1)}m` });
+    else if (r.step === 1) evts.push({ who: 'atk', ic: 'ic-atk', icon: 'ti-crosshair', wc: 'fw-atk', title: '공격자 — 위조 개시', msg: `${r.spoof_step.toFixed(2)}m/스텝 점진적 주입 시작`, tag: '이론적 GPS_INPUT 경로' });
+  }
+  if (r.state !== lastState) {
+    const mm = { SUSPICIOUS: '이상 패턴 감지 — 경보·명령 보류', ATTACK: '공격 확정 — GPS 차단·IMU 전환', RECOVERY: '위협 감소 — 복구 검증 시작', NORMAL: '상태 정상화 — GPS 복원' };
+    const cm = { SUSPICIOUS: { ic: 'ic-warn', icon: 'ti-alert-triangle', wc: 'fw-warn' }, ATTACK: { ic: 'ic-def', icon: 'ti-shield-lock', wc: 'fw-def' }, RECOVERY: { ic: 'ic-info', icon: 'ti-refresh', wc: 'fw-info' }, NORMAL: { ic: 'ic-info', icon: 'ti-check', wc: 'fw-info' } };
+    const c = cm[r.state] || { ic: 'ic-info', icon: 'ti-info-circle', wc: 'fw-info' };
+    evts.push({ who: 'def', ...c, title: `방어자 — ${r.state}`, msg: mm[r.state] || r.action, tag: `윈도우:${r.win_m.toFixed(1)}m 절대:${r.abs_m.toFixed(1)}m` });
+  }
+  if (r.detecting && !lastDet) evts.push({ arrow: true, dir: 'def', msg: '방어 → 공격 탐지 신호 전달 (폐루프)' });
+  if (!r.detecting && lastDet) evts.push({ arrow: true, dir: 'atk', msg: '공격자: 탐지 해제 확인 → 가속 재개' });
+  evts.forEach(ev => {
+    if (ev.arrow) {
+      const row = document.createElement('div'); row.className = 'arrow-row';
+      row.innerHTML = `<span class="arrow-msg" style="color:${ev.dir === 'atk' ? 'var(--red)' : 'var(--grn)'};font-weight:700">${ev.dir === 'atk' ? '←' : '→'}</span><div class="arrow-line"></div><span class="arrow-msg">${ev.msg}</span>`;
+      body.appendChild(row);
+    } else {
+      const item = document.createElement('div'); item.className = 'fi';
+      item.innerHTML = `<span class="fi-step">${r.step}</span><div class="fi-ic ${ev.ic}"><i class="ti ${ev.icon}" style="font-size:8px"></i></div><div class="fi-body"><div class="fi-who ${ev.wc}">${ev.title}</div><div class="fi-msg">${ev.msg}</div>${ev.tag ? `<div class="fi-tag">${ev.tag}</div>` : ''}</div>`;
+      body.appendChild(item);
+    }
+  });
+  if (evts.length) body.scrollTop = body.scrollHeight;
+}
+function addFeedRaw(msg, color) {
+  const body = document.getElementById('feed-body');
+  const row = document.createElement('div');
+  row.style.cssText = `padding:5px 12px;font-size:8px;color:${color};border-bottom:1px solid #16161e`;
+  row.textContent = msg; body.appendChild(row); body.scrollTop = body.scrollHeight;
+}
+function clearFeed() { document.getElementById('feed-body').innerHTML = ''; }
+
+// ══════════════════════════════════════════════
+// Chart.js
+// ══════════════════════════════════════════════
+let cMain = null, cStep = null;
+function initCharts() {
+  const base = { responsive: true, maintainAspectRatio: false, animation: { duration: 0 }, plugins: { legend: { display: false }, tooltip: { mode: 'index', intersect: false } }, scales: { x: { ticks: { color: '#4a4a68', font: { size: 8 }, maxTicksLimit: 10 }, grid: { color: '#1a1a22' } }, y: { ticks: { color: '#4a4a68', font: { size: 8 } }, grid: { color: '#1a1a22' }, min: 0 } } };
+  if (cMain) cMain.destroy(); if (cStep) cStep.destroy();
+  cMain = new Chart(document.getElementById('c-main'), { type: 'line', data: { labels: [], datasets: [{ label: '누적 기만량', data: [], borderColor: '#e05252', borderWidth: 2, pointRadius: 0, tension: .3, fill: false }, { label: '윈도우 드리프트', data: [], borderColor: '#4a8ee8', borderWidth: 1.5, borderDash: [4, 3], pointRadius: 0, tension: .3, fill: false }, { label: '탐지구간', data: [], borderColor: 'transparent', backgroundColor: 'rgba(62,200,122,0.12)', fill: true, pointRadius: 0, tension: 0 }] }, options: { ...base, plugins: { ...base.plugins, legend: { display: true, labels: { color: '#8888a8', font: { size: 8 }, boxWidth: 8, padding: 8 } } } } });
+  cStep = new Chart(document.getElementById('c-step'), { type: 'bar', data: { labels: [], datasets: [{ label: '스텝크기', data: [], backgroundColor: [], borderWidth: 0, borderRadius: 2 }] }, options: { ...base } });
+}
+
+function pushCharts(r) {
+  const n = simHistory.length;
+  const d = simHistory;
+  const labs = d.map(x => x.step);
+  cMain.data.labels = labs;
+  cMain.data.datasets[0].data = d.map(x => x.cum_m);
+  cMain.data.datasets[1].data = d.map(x => x.win_m);
+  cMain.data.datasets[2].data = d.map(x => x.detecting ? x.cum_m : null);
+  cMain.update('none');
+  cStep.data.labels = labs;
+  cStep.data.datasets[0].data = d.map(x => x.spoof_step);
+  cStep.data.datasets[0].backgroundColor = d.map(x => x.atk_decide === 'backoff' ? 'rgba(224,82,82,.7)' : x.atk_decide === 'accel' ? 'rgba(62,200,122,.7)' : 'rgba(74,142,232,.5)');
+  cStep.update('none');
+}
+
+// ══════════════════════════════════════════════
+// 지도 캔버스
+// ══════════════════════════════════════════════
+const mapCv = document.getElementById('map-cv');
+const mapCtx = mapCv.getContext('2d');
+const formCv = document.getElementById('form-cv');
+const formCtx = formCv.getContext('2d');
+function resizeCvs() {
+  [mapCv, droneCv, formCv].forEach(cv => { const p = cv.parentElement; cv.width = p.clientWidth; cv.height = p.clientHeight; });
+}
+
+function drawMap(upTo) {
+  const W = mapCv.width, H = mapCv.height;
+  mapCtx.clearRect(0, 0, W, H);
+  mapCtx.fillStyle = '#0d0d14'; mapCtx.fillRect(0, 0, W, H);
+  const d = simHistory.slice(0, upTo);
+  const allX = d.map(r => (r.perc_lon - BLo) * 111000 * Math.cos(BL * Math.PI / 180));
+  const allY = d.map(r => (r.perc_lat - BL) * 111000);
+  const minX = Math.min(0, ...allX), maxX = Math.max(1, ...allX);
+  const minY = Math.min(0, ...allY), maxY = Math.max(1, ...allY);
+  const pad = 26;
+  const sc = Math.min((W - pad * 2) / Math.max(maxX - minX, 1), (H - pad * 2) / Math.max(maxY - minY, 1));
+  const ox = pad + (W - pad * 2 - (maxX - minX) * sc) / 2 - minX * sc;
+  const oy = H - pad - (H - pad * 2 - (maxY - minY) * sc) / 2 + minY * sc;
+  const toP = (x, y) => [ox + x * sc, oy - y * sc];
+  // 그리드
+  mapCtx.strokeStyle = 'rgba(46,46,58,.5)'; mapCtx.lineWidth = .5;
+  for (let g = -300; g <= 300; g += 50) {
+    mapCtx.beginPath(); mapCtx.moveTo(ox + g * sc, 0); mapCtx.lineTo(ox + g * sc, H); mapCtx.stroke();
+    mapCtx.beginPath(); mapCtx.moveTo(0, oy - g * sc); mapCtx.lineTo(W, oy - g * sc); mapCtx.stroke();
+  }
+  // 실제 위치 점
+  d.forEach(r => { const x = (r.real_lon - BLo) * 111000 * Math.cos(BL * Math.PI / 180), y = (r.real_lat - BL) * 111000; const [px, py] = toP(x, y); mapCtx.beginPath(); mapCtx.arc(px, py, 2, 0, Math.PI * 2); mapCtx.fillStyle = 'rgba(62,200,122,.5)'; mapCtx.fill(); });
+  // GCS 경로
+  if (d.length > 1) { mapCtx.strokeStyle = '#e05252'; mapCtx.lineWidth = 1.8; mapCtx.beginPath(); d.forEach((r, i) => { const x = (r.perc_lon - BLo) * 111000 * Math.cos(BL * Math.PI / 180), y = (r.perc_lat - BL) * 111000; const [px, py] = toP(x, y); i === 0 ? mapCtx.moveTo(px, py) : mapCtx.lineTo(px, py); }); mapCtx.stroke(); }
+  // 현재 위치 아이콘
+  if (d.length) {
+    const cur = d[d.length - 1];
+    const cx = (cur.perc_lon - BLo) * 111000 * Math.cos(BL * Math.PI / 180), cy = (cur.perc_lat - BL) * 111000;
+    const [cpx, cpy] = toP(cx, cy);
+    drawDroneIcon(mapCtx, cpx, cpy, cur.detecting ? '#e05252' : '#e8a020', 13);
+    const rx = (cur.real_lon - BLo) * 111000 * Math.cos(BL * Math.PI / 180), ry = (cur.real_lat - BL) * 111000;
+    const [rpx, rpy] = toP(rx, ry);
+    drawDroneIcon(mapCtx, rpx, rpy, '#3ec87a', 10);
+    // 이탈선
+    mapCtx.strokeStyle = 'rgba(232,160,32,.35)'; mapCtx.lineWidth = 1; mapCtx.setLineDash([3, 3]);
+    mapCtx.beginPath(); mapCtx.moveTo(rpx, rpy); mapCtx.lineTo(cpx, cpy); mapCtx.stroke();
+    mapCtx.setLineDash([]);
+    // 탐지 표시
+    const fd = d.find(r => r.detecting);
+    if (fd) { const fx = (fd.perc_lon - BLo) * 111000 * Math.cos(BL * Math.PI / 180), fy = (fd.perc_lat - BL) * 111000; const [fpx, fpy] = toP(fx, fy); mapCtx.strokeStyle = '#3ec87a'; mapCtx.lineWidth = 1.5; mapCtx.beginPath(); mapCtx.arc(fpx, fpy, 9, 0, Math.PI * 2); mapCtx.stroke(); mapCtx.fillStyle = '#3ec87a'; mapCtx.font = 'bold 8px sans-serif'; mapCtx.fillText('탐지', fpx + 11, fpy + 3); }
+  }
+  // 시작점
+  const [spx, spy] = toP(0, 0); mapCtx.beginPath(); mapCtx.arc(spx, spy, 4, 0, Math.PI * 2); mapCtx.fillStyle = '#4a8ee8'; mapCtx.fill();
+  // 범례
+  mapCtx.font = '8px sans-serif';
+  [['#3ec87a', '실제 위치'], ['#e05252', 'GCS 인식 (위조)']].forEach(([c, lbl], i) => { mapCtx.fillStyle = c; mapCtx.fillRect(8, H - 36 + i * 14, 7, 7); mapCtx.fillStyle = 'rgba(136,136,168,.8)'; mapCtx.fillText(lbl, 18, H - 29 + i * 14); });
+}
+
+function drawDroneIcon(ctx, x, y, color, size) {
+  const s = size / 2; ctx.save(); ctx.translate(x, y);
+  ctx.fillStyle = color; ctx.beginPath(); ctx.arc(0, 0, s * .4, 0, Math.PI * 2); ctx.fill();
+  [[-1, -1], [1, -1], [-1, 1], [1, 1]].forEach(([dx, dy]) => {
+    ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(dx * s * .7, dy * s * .7);
+    ctx.strokeStyle = color; ctx.lineWidth = 1.5; ctx.stroke();
+    ctx.beginPath(); ctx.arc(dx * s * .7, dy * s * .7, s * .3, 0, Math.PI * 2);
+    ctx.strokeStyle = color; ctx.lineWidth = 1; ctx.globalAlpha = .5; ctx.stroke(); ctx.globalAlpha = 1;
+  });
+  ctx.restore();
+}
+
+// ══════════════════════════════════════════════
+// 드론 시점 캔버스
+// ══════════════════════════════════════════════
+const droneCv = document.getElementById('drone-cv');
+const droneCtx = droneCv.getContext('2d');
+let droneFrame = 0;
+
+function drawDroneView(r) {
+  const W = droneCv.width, H = droneCv.height; droneFrame++;
+  droneCtx.clearRect(0, 0, W, H);
+  const state = r ? r.state : 'NORMAL', det = r ? r.detecting : false, cumM = r ? r.cum_m : 0, drift = r ? r.win_m : 0;
+  const skyG = droneCtx.createLinearGradient(0, 0, 0, H * .55);
+  if (state === 'ATTACK') { skyG.addColorStop(0, '#1a0808'); skyG.addColorStop(1, '#2a1010'); }
+  else if (state === 'SUSPICIOUS') { skyG.addColorStop(0, '#1a1208'); skyG.addColorStop(1, '#22180a'); }
+  else if (state === 'RECOVERY') { skyG.addColorStop(0, '#0e0e1a'); skyG.addColorStop(1, '#14142a'); }
+  else { skyG.addColorStop(0, '#0a0a14'); skyG.addColorStop(1, '#10101e'); }
+  droneCtx.fillStyle = skyG; droneCtx.fillRect(0, 0, W, H * .55);
+  const gG = droneCtx.createLinearGradient(0, H * .55, 0, H);
+  gG.addColorStop(0, '#121a12'); gG.addColorStop(1, '#0a120a');
+  droneCtx.fillStyle = gG; droneCtx.fillRect(0, H * .55, W, H * .45);
+  const horizon = H * .55;
+  droneCtx.strokeStyle = 'rgba(62,200,122,.1)'; droneCtx.lineWidth = .8;
+  for (let i = 1; i <= 8; i++) { const y = horizon + ((H - horizon) / 8) * i, xO = W * .5 * (i / 8) * .85; droneCtx.beginPath(); droneCtx.moveTo(W / 2 - xO, y); droneCtx.lineTo(W / 2 + xO, y); droneCtx.stroke(); }
+  for (let i = -5; i <= 5; i++) { droneCtx.beginPath(); droneCtx.moveTo(W / 2 + i * W * .08, horizon); droneCtx.lineTo(W / 2 + i * W * .25, H); droneCtx.stroke(); }
+  const hc = state === 'ATTACK' ? '#e05252' : state === 'SUSPICIOUS' ? '#e8a020' : state === 'RECOVERY' ? '#9b6cf0' : '#3ec87a';
+  const cx = W / 2, cy = H / 2 - 8;
+  droneCtx.strokeStyle = hc; droneCtx.lineWidth = 1.2; droneCtx.globalAlpha = .7;
+  [[-20, -8], [8, 0, 20, 0], [0, -20, 0, -8], [0, 8, 0, 20]].forEach((l, i) => {
+    droneCtx.beginPath();
+    if (i === 0) { droneCtx.moveTo(cx - 20, cy); droneCtx.lineTo(cx - 8, cy); }
+    else if (i === 1) { droneCtx.moveTo(cx + 8, cy); droneCtx.lineTo(cx + 20, cy); }
+    else if (i === 2) { droneCtx.moveTo(cx, cy - 20); droneCtx.lineTo(cx, cy - 8); }
+    else { droneCtx.moveTo(cx, cy + 8); droneCtx.lineTo(cx, cy + 20); }
+    droneCtx.stroke();
+  });
+  droneCtx.globalAlpha = 1;
+  if (cumM > 5) {
+    const intensity = Math.min(cumM / 80, .6);
+    droneCtx.fillStyle = `rgba(224,82,82,${intensity * .05})`;
+    for (let y = 0; y < H; y += 4) droneCtx.fillRect(0, y, W, 2);
+    if (det) {
+      const bG = droneCtx.createLinearGradient(0, 0, W, 0);
+      bG.addColorStop(0, `rgba(224,82,82,${intensity * .35})`);
+      bG.addColorStop(.1, 'transparent'); bG.addColorStop(.9, 'transparent');
+      bG.addColorStop(1, `rgba(224,82,82,${intensity * .35})`);
+      droneCtx.fillStyle = bG; droneCtx.fillRect(0, 0, W, H);
+    }
+  }
+  droneCtx.font = 'bold 8px monospace'; droneCtx.fillStyle = hc;
+  droneCtx.fillText('ALT  20.0m', 8, 20);
+  droneCtx.fillText(`SPD  ${r ? r.spoof_step.toFixed(2) : '0.00'}m/s`, 8, 31);
+  droneCtx.fillText(`GPS  ${r && r.detecting ? 'SPOOFED' : 'LOCK'}`, 8, 42);
+  droneCtx.textAlign = 'right';
+  droneCtx.fillText(`DRIFT ${drift.toFixed(1)}m`, W - 8, 20);
+  droneCtx.fillText(`BIAS  ${cumM.toFixed(1)}m`, W - 8, 31);
+  droneCtx.fillText(`${state}`, W - 8, 42);
+  droneCtx.textAlign = 'left';
+  if (det) {
+    const alpha = .5 + .5 * Math.sin(droneFrame * .25);
+    droneCtx.fillStyle = `rgba(224,82,82,${alpha})`;
+    droneCtx.font = 'bold 10px monospace'; droneCtx.textAlign = 'center';
+    droneCtx.fillText('⚠ GPS SPOOF DETECTED — IMU MODE', W / 2, H - 18);
+    droneCtx.textAlign = 'left';
+  }
+  droneCtx.fillStyle = 'rgba(13,13,16,.8)'; droneCtx.fillRect(0, H - 13, W, 13);
+  droneCtx.fillStyle = hc; droneCtx.font = '7px monospace';
+  droneCtx.fillText(`STEP ${r ? r.step : 0}  |  ${state}  |  ${det ? 'DEFENSE ACTIVE' : 'MONITORING'}  |  Python Backend`, 7, H - 3);
+  droneCtx.strokeStyle = 'rgba(62,200,122,.12)'; droneCtx.lineWidth = 6; droneCtx.strokeRect(0, 0, W, H);
+}
+
+// ══════════════════════════════════════════════
+// 대형 이탈 애니메이션 (Formation View)
+// 드론이 정상 대형에서 벗어났다가 복귀하는 장면
+// ══════════════════════════════════════════════
+let formFrame = 0;
+
+// 드론 편대 기준 포메이션 (중심 기준 상대 좌표, m)
+// 다이아몬드 대형: LEAD 앞, 좌우 윙, 후방 트레일
+const FORMATION = [
+  { id: 0, ox:   0, oy:  0,  label: 'LEAD',   role: 'leader' },  // 편대장 (공격 대상)
+  { id: 1, ox: -38, oy: 30,  label: 'WING-L', role: 'wing'   },
+  { id: 2, ox:  38, oy: 30,  label: 'WING-R', role: 'wing'   },
+  { id: 3, ox: -20, oy: 58,  label: 'MID-L',  role: 'mid'    },
+  { id: 4, ox:  20, oy: 58,  label: 'MID-R',  role: 'mid'    },
+  { id: 5, ox:   0, oy: 82,  label: 'TRAIL',  role: 'trail'  },
+];
+
+function drawFormation(r) {
+  const W = formCv.width, H = formCv.height;
+  formFrame++;
+  formCtx.clearRect(0, 0, W, H);
+
+  // 배경
+  formCtx.fillStyle = '#0a0a12'; formCtx.fillRect(0, 0, W, H);
+
+  // 상태
+  const state  = r ? r.state  : 'NORMAL';
+  const det    = r ? r.detecting : false;
+  const cumM   = r ? r.cum_m  : 0;
+  const step   = r ? r.step   : 0;
+  const action = r ? r.action : 'PASS';
+
+  // 중심 픽셀 — 편대가 위쪽에 있으므로 cy를 약간 위로
+  const cx = W / 2, cy = H * 0.42;
+
+  // m → px 스케일: 넓은 캔버스에 맞게 H 기준 (formation 세로 크기 ~82m)
+  const scale = Math.min(W / 220, H / 130);
+
+  // 그리드 (지면)
+  formCtx.strokeStyle = 'rgba(62,200,122,0.07)'; formCtx.lineWidth = 0.5;
+  const gs = 20 * scale;
+  for (let x = cx % gs; x < W; x += gs) { formCtx.beginPath(); formCtx.moveTo(x, 0); formCtx.lineTo(x, H); formCtx.stroke(); }
+  for (let y = cy % gs; y < H; y += gs) { formCtx.beginPath(); formCtx.moveTo(0, y); formCtx.lineTo(W, y); formCtx.stroke(); }
+
+  // 편대 이동 벡터 (전체가 앞으로 천천히 비행)
+  const flightT = formFrame * 0.4;
+  const fX = 0;
+  const fY = -(flightT % (H / scale)) * scale;  // 위로 스크롤
+
+  // 탐지/상태에 따른 색
+  const stateColor = {
+    NORMAL:     '#3ec87a',
+    SUSPICIOUS: '#e8a020',
+    ATTACK:     '#e05252',
+    RECOVERY:   '#9b6cf0',
+  }[state] || '#3ec87a';
+
+  // ── 0번 드론(LEAD)의 기만 오프셋 계산 ──
+  // 정상: 제자리. 기만 시작 → 점점 대형 밖으로 이탈. 탐지 후 RECOVERY → 복귀.
+  let deceptOffset = { x: 0, y: 0 };
+  let returnProgress = 0;
+
+  if (state === 'NORMAL' && cumM === 0) {
+    // 아직 공격 없음
+    deceptOffset = { x: 0, y: 0 };
+  } else if (state === 'RECOVERY' || action === 'HOVER') {
+    // 복귀 중: cumM이 줄어드는 효과 (애니메이션으로 표현)
+    returnProgress = Math.min(1, (formFrame % 60) / 40);
+    const remainM = cumM * (1 - returnProgress * 0.6);
+    deceptOffset = { x: remainM * scale * 0.6, y: -remainM * scale * 0.4 };
+  } else if (state === 'ATTACK' || state === 'SUSPICIOUS') {
+    // 이탈 중: cumM만큼 오른쪽+위로 drift
+    const wobble = Math.sin(formFrame * 0.08) * 2 * scale;
+    deceptOffset = { x: cumM * scale * 0.6 + wobble, y: -cumM * scale * 0.4 };
+  } else {
+    // NORMAL이지만 누적 있음 (복귀 완료 직후)
+    deceptOffset = { x: cumM * scale * 0.1, y: -cumM * scale * 0.05 };
+  }
+
+  // ── 대형 기준선 그리기 ──
+  // 각 드론의 정상 위치를 점선으로 표시
+  FORMATION.forEach(d => {
+    const nx = cx + d.ox * scale + fX;
+    const ny = cy + d.oy * scale + (fY % H);
+    formCtx.beginPath(); formCtx.arc(nx, ny, 10 * scale * 0.4, 0, Math.PI * 2);
+    formCtx.strokeStyle = 'rgba(136,136,168,0.15)'; formCtx.lineWidth = 1;
+    formCtx.setLineDash([3, 4]); formCtx.stroke(); formCtx.setLineDash([]);
+  });
+
+  // LEAD ↔ 나머지 드론 편대 연결선
+  const leadNx = cx + FORMATION[0].ox * scale + fX;
+  const leadNy = cy + FORMATION[0].oy * scale + (fY % H);
+  FORMATION.slice(1).forEach(d => {
+    const nx = cx + d.ox * scale + fX;
+    const ny = cy + d.oy * scale + (fY % H);
+    formCtx.beginPath(); formCtx.moveTo(leadNx, leadNy); formCtx.lineTo(nx, ny);
+    formCtx.strokeStyle = 'rgba(74,142,232,0.2)'; formCtx.lineWidth = 1;
+    formCtx.setLineDash([4, 5]); formCtx.stroke(); formCtx.setLineDash([]);
+  });
+
+  // ── 실제 드론 위치 + 경로 잔상 그리기 ──
+  FORMATION.forEach((d, i) => {
+    // 기본 위치 (정상 대형)
+    let dx = cx + d.ox * scale + fX;
+    let dy = cy + d.oy * scale + (fY % H);
+
+    // LEAD 드론만 기만 오프셋 적용
+    if (i === 0) {
+      dx += deceptOffset.x;
+      dy += deceptOffset.y;
+    }
+
+    const color = i === 0 ? stateColor : '#4a8ee8';
+    const sz = i === 0 ? 7 : 5.5;
+
+    // 이탈 경로 잔상 (LEAD만)
+    if (i === 0 && cumM > 0) {
+      const trailLen = Math.min(simHistory.length, 18);
+      for (let t = 0; t < trailLen; t++) {
+        const hr = simHistory[simHistory.length - 1 - t];
+        if (!hr) continue;
+        const alpha = (1 - t / trailLen) * 0.35;
+        const tDx = cx + hr.cum_m * scale * 0.6 + fX;
+        const tDy = cy - hr.cum_m * scale * 0.4 + (fY % H);
+        formCtx.beginPath(); formCtx.arc(tDx, tDy, 2.5, 0, Math.PI * 2);
+        formCtx.fillStyle = `rgba(224,82,82,${alpha})`; formCtx.fill();
+      }
+    }
+
+    // 드론 아이콘
+    drawFormDrone(formCtx, dx, dy, color, sz, i === 0 && det);
+
+    // 라벨
+    formCtx.font = `bold ${Math.round(sz + 1)}px monospace`;
+    formCtx.fillStyle = i === 0 ? stateColor : 'rgba(136,136,168,0.7)';
+    formCtx.textAlign = 'center';
+    formCtx.fillText(d.label, dx, dy - sz * 2 - 2);
+    formCtx.textAlign = 'left';
+
+    // LEAD GCS 인식 위치 (위조된 위치, 반투명 빨간 점선)
+    if (i === 0 && cumM > 2) {
+      const gx = cx + FORMATION[0].ox * scale + fX;  // 원래 위치 = GCS가 믿는 곳
+      const gy = cy + FORMATION[0].oy * scale + (fY % H);
+      // 이탈 화살표
+      formCtx.beginPath(); formCtx.moveTo(gx, gy); formCtx.lineTo(dx, dy);
+      formCtx.strokeStyle = 'rgba(232,160,32,0.5)'; formCtx.lineWidth = 1.2;
+      formCtx.setLineDash([3, 3]); formCtx.stroke(); formCtx.setLineDash([]);
+      // GCS 인식 위치 (원래 자리, 반투명)
+      formCtx.beginPath(); formCtx.arc(gx, gy, sz * 0.7, 0, Math.PI * 2);
+      formCtx.strokeStyle = 'rgba(232,160,32,0.4)'; formCtx.lineWidth = 1;
+      formCtx.stroke();
+      formCtx.fillStyle = 'rgba(232,160,32,0.15)'; formCtx.fill();
+      formCtx.font = '7px monospace'; formCtx.fillStyle = 'rgba(232,160,32,0.6)';
+      formCtx.textAlign = 'center';
+      formCtx.fillText('GCS 인식', gx, gy + sz * 1.8);
+      formCtx.textAlign = 'left';
+    }
+  });
+
+  // 복귀 경로 표시 (RECOVERY 상태)
+  if (state === 'RECOVERY' || action === 'HOVER') {
+    const rx = cx + FORMATION[0].ox * scale + fX;
+    const ry = cy + FORMATION[0].oy * scale + (fY % H);
+    const dx2 = cx + FORMATION[0].ox * scale + fX + deceptOffset.x;
+    const dy2 = cy + FORMATION[0].oy * scale + (fY % H) + deceptOffset.y;
+    // 복귀 화살표
+    formCtx.beginPath(); formCtx.moveTo(dx2, dy2); formCtx.lineTo(rx, ry);
+    formCtx.strokeStyle = '#9b6cf0'; formCtx.lineWidth = 1.5;
+    formCtx.setLineDash([4, 3]); formCtx.stroke(); formCtx.setLineDash([]);
+    // 화살표 머리
+    const ang = Math.atan2(ry - dy2, rx - dx2);
+    const aSize = 6;
+    formCtx.beginPath();
+    formCtx.moveTo(rx, ry);
+    formCtx.lineTo(rx - aSize * Math.cos(ang - 0.4), ry - aSize * Math.sin(ang - 0.4));
+    formCtx.lineTo(rx - aSize * Math.cos(ang + 0.4), ry - aSize * Math.sin(ang + 0.4));
+    formCtx.closePath();
+    formCtx.fillStyle = '#9b6cf0'; formCtx.fill();
+  }
+
+  // 이탈 거리 표시 (LEAD가 이탈했을 때)
+  if (cumM > 2) {
+    const dx3 = cx + FORMATION[0].ox * scale + fX + deceptOffset.x;
+    const dy3 = cy + FORMATION[0].oy * scale + (fY % H) + deceptOffset.y;
+    const gx = cx + FORMATION[0].ox * scale + fX;
+    const gy = cy + FORMATION[0].oy * scale + (fY % H);
+    const midX = (dx3 + gx) / 2, midY = (dy3 + gy) / 2;
+    formCtx.font = 'bold 9px monospace';
+    formCtx.fillStyle = 'rgba(232,160,32,0.85)'; formCtx.textAlign = 'center';
+    formCtx.fillText(`${cumM.toFixed(1)}m`, midX + 8, midY - 4);
+    formCtx.textAlign = 'left';
+  }
+
+  // ── 좌측 범례 패널 ──
+  const lx = 10, ly = 22;
+  formCtx.fillStyle = 'rgba(13,13,20,0.75)';
+  formCtx.beginPath(); formCtx.roundRect(lx, ly, 108, 110, 4); formCtx.fill();
+  formCtx.strokeStyle = 'rgba(74,74,104,0.4)'; formCtx.lineWidth = 0.5;
+  formCtx.beginPath(); formCtx.roundRect(lx, ly, 108, 110, 4); formCtx.stroke();
+
+  formCtx.font = 'bold 8px monospace'; formCtx.fillStyle = 'rgba(136,136,168,0.8)';
+  formCtx.fillText('LEGEND', lx + 8, ly + 14);
+
+  const legendItems = [
+    { color: stateColor,                 label: 'LEAD (공격 대상)' },
+    { color: '#4a8ee8',                  label: '윙 / 후방 드론' },
+    { color: 'rgba(232,160,32,0.7)',     label: 'GCS 인식 위치' },
+    { color: 'rgba(155,108,240,0.8)',    label: '복귀 경로' },
+    { color: 'rgba(224,82,82,0.5)',      label: '이탈 궤적' },
+  ];
+  legendItems.forEach((it, i) => {
+    const iy = ly + 26 + i * 17;
+    formCtx.fillStyle = it.color; formCtx.fillRect(lx + 8, iy - 5, 7, 7);
+    formCtx.fillStyle = 'rgba(136,136,168,0.7)'; formCtx.font = '8px monospace';
+    formCtx.fillText(it.label, lx + 20, iy + 1);
+  });
+
+  // ── 우측 수치 패널 ──
+  const rx = W - 120, ry = 22;
+  formCtx.fillStyle = 'rgba(13,13,20,0.75)';
+  formCtx.beginPath(); formCtx.roundRect(rx, ry, 110, 125, 4); formCtx.fill();
+  formCtx.strokeStyle = 'rgba(74,74,104,0.4)'; formCtx.lineWidth = 0.5;
+  formCtx.beginPath(); formCtx.roundRect(rx, ry, 110, 125, 4); formCtx.stroke();
+
+  formCtx.font = 'bold 8px monospace'; formCtx.fillStyle = 'rgba(136,136,168,0.8)';
+  formCtx.fillText('LIVE DATA', rx + 8, ry + 14);
+
+  const liveItems = [
+    { label: 'STATE',   val: state,                            color: stateColor },
+    { label: 'ACTION',  val: action,                           color: stateColor },
+    { label: 'CUM',     val: cumM.toFixed(1) + 'm',           color: cumM > 15 ? '#e05252' : cumM > 8 ? '#e8a020' : '#3ec87a' },
+    { label: 'DRIFT',   val: (r ? r.win_m : 0).toFixed(1) + 'm', color: '#4a8ee8' },
+    { label: 'STEP',    val: String(step),                     color: '#9090a8' },
+    { label: 'DETECT',  val: det ? 'YES' : 'NO',              color: det ? '#e05252' : '#3ec87a' },
+  ];
+  liveItems.forEach((it, i) => {
+    const iy = ry + 26 + i * 17;
+    formCtx.fillStyle = 'rgba(74,74,104,0.8)'; formCtx.font = '7px monospace';
+    formCtx.fillText(it.label, rx + 8, iy + 1);
+    formCtx.fillStyle = it.color; formCtx.font = 'bold 9px monospace';
+    formCtx.fillText(it.val, rx + 52, iy + 1);
+  });
+
+  // ── 하단 상태 배너 ──
+  const bannerColor = { NORMAL: 'rgba(62,200,122,.12)', SUSPICIOUS: 'rgba(232,160,32,.13)', ATTACK: 'rgba(224,82,82,.15)', RECOVERY: 'rgba(155,108,240,.13)' }[state] || 'transparent';
+  formCtx.fillStyle = bannerColor; formCtx.fillRect(0, H - 24, W, 24);
+  formCtx.strokeStyle = stateColor + '33'; formCtx.lineWidth = 1;
+  formCtx.beginPath(); formCtx.moveTo(0, H - 24); formCtx.lineTo(W, H - 24); formCtx.stroke();
+  formCtx.fillStyle = stateColor; formCtx.font = 'bold 9px monospace'; formCtx.textAlign = 'center';
+  const bannerText = {
+    NORMAL:     cumM > 0 ? `✓ 대형 복귀 완료 — 정상 편대 비행 중  |  기만 잔량 ${cumM.toFixed(1)}m` : '✓ 정상 편대 비행 — 6기 다이아몬드 대형 유지 중',
+    SUSPICIOUS: `⚠  이탈 감지 중 — LEAD 드론 대형 이탈 ${cumM.toFixed(1)}m  |  방어: 경보 발령`,
+    ATTACK:     `✗  대형 이탈 확정 — LEAD GPS 차단·IMU 전환  |  이탈량 ${cumM.toFixed(1)}m`,
+    RECOVERY:   `↩  대형 복귀 진행 중 — GPS 재동기화 대기  |  잔여 편차 ${cumM.toFixed(1)}m`,
+  }[state] || '';
+  formCtx.fillText(bannerText, W / 2, H - 9);
+  formCtx.textAlign = 'left';
+
+  // 타이틀 업데이트
+  const ft = document.getElementById('form-title');
+  if (ft) ft.textContent = {
+    NORMAL:     '편대 이탈 애니메이션 — 6기 다이아몬드 대형 정상 유지',
+    SUSPICIOUS: '편대 이탈 애니메이션 — LEAD 이탈 감지',
+    ATTACK:     '편대 이탈 애니메이션 — LEAD 대형 이탈 확정',
+    RECOVERY:   '편대 이탈 애니메이션 — LEAD 복귀 진행 중',
+  }[state] || '편대 이탈 애니메이션';
+}
+
+function drawFormDrone(ctx, x, y, color, sz, alert) {
+  // 경보 링
+  if (alert) {
+    const pulse = 0.5 + 0.5 * Math.sin(formFrame * 0.2);
+    ctx.beginPath(); ctx.arc(x, y, sz * 2.5 * (1 + pulse * 0.3), 0, Math.PI * 2);
+    ctx.strokeStyle = `rgba(224,82,82,${0.4 * pulse})`; ctx.lineWidth = 1.5; ctx.stroke();
+  }
+  // 몸체
+  ctx.fillStyle = color; ctx.beginPath(); ctx.arc(x, y, sz * 0.45, 0, Math.PI * 2); ctx.fill();
+  // 암 + 프로펠러
+  [[-1,-1],[1,-1],[-1,1],[1,1]].forEach(([dx, dy]) => {
+    const ax = x + dx * sz * 0.75, ay = y + dy * sz * 0.75;
+    ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(ax, ay);
+    ctx.strokeStyle = color; ctx.lineWidth = 1.5; ctx.stroke();
+    ctx.beginPath(); ctx.arc(ax, ay, sz * 0.32, 0, Math.PI * 2);
+    ctx.strokeStyle = color; ctx.lineWidth = 1; ctx.globalAlpha = 0.5 + 0.5 * Math.abs(Math.sin(formFrame * 0.3)); ctx.stroke();
+    ctx.globalAlpha = 1;
+  });
+}
+
+// ══════════════════════════════════════════════
+// 시뮬레이션 제어
+// ══════════════════════════════════════════════
+function getConfig() {
+  return {
+    def_mode: document.getElementById('def-mode').value,
+    atk_mode: document.getElementById('atk-mode').value,
+    init_step_m: parseFloat(document.getElementById('r-stp').value),
+    length: parseInt(document.getElementById('r-len').value),
+    drift_window: parseInt(document.getElementById('r-win').value),
+    drift_threshold: parseFloat(document.getElementById('r-thr').value),
+    confirm: parseInt(document.getElementById('r-cfm').value),
+  };
+}
+
+function startSim() {
+  if (!wsReady) { alert('서버에 연결되지 않았습니다.\npython server.py를 먼저 실행해주세요.'); return; }
+  resetUI(true);
+  const cfg = getConfig();
+  totalSteps = cfg.length;
+  document.getElementById('m-step-s').textContent = '/ ' + totalSteps;
+  document.getElementById('m-thr-s').textContent = '임계: ' + cfg.drift_threshold + 'm';
+  // 서버에 start 후 run 명령
+  sendWS({ cmd: 'start', config: cfg });
+  setTimeout(() => {
+    sendWS({ cmd: 'run', length: cfg.length, interval: stepInterval / 1000 });
+  }, 100);
+  running = true; paused = false;
+  document.getElementById('btn-run').disabled = true;
+  document.getElementById('btn-pause').disabled = false;
+  document.getElementById('btn-step').disabled = false;
+}
+
+function togglePause() {
+  // pause는 클라이언트 사이드에서 pendingSteps 소비 중단으로 구현
+  paused = !paused;
+  const btn = document.getElementById('btn-pause');
+  btn.innerHTML = paused ? '<i class="ti ti-player-play"></i>' : '<i class="ti ti-player-pause"></i>';
+  if (!paused) drainPending();
+}
+
+function drainPending() {
+  if (paused || !pendingSteps.length) return;
+  const r = pendingSteps.shift();
+  simHistory.push(r);
+  curView = simHistory.length;
+  applyStep(r);
+  setTimeout(drainPending, 16);
+}
+
+function stepOnce() {
+  if (!paused) { paused = true; document.getElementById('btn-pause').innerHTML = '<i class="ti ti-player-play"></i>'; }
+  if (pendingSteps.length) {
+    const r = pendingSteps.shift();
+    simHistory.push(r); curView = simHistory.length; applyStep(r);
+  } else {
+    // 서버에 단일 스텝 요청
+    sendWS({ cmd: 'step' });
+  }
+}
+
+function resetSim() {
+  clearTimeout(autoTimer); cancelAnimationFrame(rafId);
+  sendWS({ cmd: 'reset', config: getConfig() });
+  resetUI(false);
+  rafId = requestAnimationFrame(renderLoop);
+}
+
+function resetUI(soft) {
+  simHistory = []; curView = 0; mttd = null; pendingSteps = [];
+  lastState = 'NORMAL'; lastDet = false; lastDecide = ''; fbH.length = 0;
+  document.getElementById('prog').style.width = '0%';
+  document.getElementById('m-step').textContent = '0';
+  document.getElementById('m-cum').textContent = '0.0m';
+  document.getElementById('m-win').textContent = '0.0m';
+  document.getElementById('m-state').textContent = 'NORMAL';
+  document.getElementById('m-action').textContent = 'PASS';
+  document.getElementById('m-mttd').textContent = '—';
+  document.getElementById('m-mttd').style.color = 'var(--tx)';
+  document.getElementById('a-stp').textContent = '—';
+  document.getElementById('a-cum').textContent = '—';
+  document.getElementById('a-det').textContent = '—';
+  document.getElementById('a-bk').textContent = '0';
+  document.getElementById('a-decide').textContent = '대기중';
+  document.getElementById('a-decide').className = 'adec id';
+  document.getElementById('tl').innerHTML = '';
+  document.getElementById('fb-track').innerHTML = '';
+  document.getElementById('sm-streak').textContent = '이상 연속: 0 / 정상 연속: 0';
+  const ha = document.getElementById('hdr-atk');
+  ha.innerHTML = '<span class="dot doff" style="background:var(--tx3)"></span> 공격자 대기';
+  ha.style.cssText = ''; ha.className = 'pill pill-atk';
+  document.getElementById('dot-atk').style.cssText = 'background:var(--tx3)';
+  ['sm-N', 'sm-S', 'sm-A', 'sm-R'].forEach(id => document.getElementById(id).className = 'smn');
+  document.getElementById('sm-N').classList.add('oN');
+  ['mc-cum', 'mc-win'].forEach(id => document.getElementById(id).className = 'mc cB');
+  document.getElementById('mc-state').className = 'mc cG';
+  resizeCvs(); drawMap(0); drawDroneView(null); drawFormation(null);
+  if (!soft) {
+    running = false; paused = false;
+    document.getElementById('btn-run').disabled = false;
+    document.getElementById('btn-pause').disabled = true;
+    document.getElementById('btn-step').disabled = true;
+    document.getElementById('btn-pause').innerHTML = '<i class="ti ti-player-pause"></i>';
+    clearFeed();
+    if (cMain) initCharts();
+  }
+}
+
+// 슬라이더
+document.getElementById('r-win').oninput = e => document.getElementById('v-win').textContent = e.target.value;
+document.getElementById('r-thr').oninput = e => document.getElementById('v-thr').textContent = e.target.value + 'm';
+document.getElementById('r-cfm').oninput = e => document.getElementById('v-cfm').textContent = e.target.value + '회';
+document.getElementById('r-stp').oninput = e => document.getElementById('v-stp').textContent = (+e.target.value).toFixed(1) + 'm';
+document.getElementById('r-len').oninput = e => document.getElementById('v-len').textContent = e.target.value + '스텝';
+document.querySelectorAll('.spd').forEach(b => b.onclick = () => {
+  document.querySelectorAll('.spd').forEach(x => x.classList.remove('on'));
+  b.classList.add('on');
+  stepInterval = +b.dataset.iv;
+});
+
+window.addEventListener('resize', () => {
+  resizeCvs();
+  if (simHistory.length) drawMap(curView);
+  drawDroneView(simHistory[curView - 1] || null);
+  drawFormation(simHistory[curView - 1] || null);
+});
+
+// 초기화
+initCharts();
+document.getElementById('sm-N').classList.add('oN');
+setTimeout(() => { resizeCvs(); drawMap(0); drawDroneView(null); drawFormation(null); }, 100);
+connectWS();
+rafId = requestAnimationFrame(renderLoop);
+</script>
+</body>
+</html>
