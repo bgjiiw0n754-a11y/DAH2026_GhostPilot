@@ -1,0 +1,880 @@
+
+===== SITL start 2026-07-07T02:27:35.811225+00:00 =====
+/home/user/ai-folder/ardupilot/build/sitl/bin/arducopter --model quad --home=37.5665,126.9780,20,0 --defaults /home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Suggested EK3_DRAG_BCOEF_* = 17.209, EK3_DRAG_MCOEF = 0.209
+Home: 37.566500 126.978000 alt=20.000000m hdg=0.000000
+Starting sketch 'ArduCopter'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+Connection on serial port 5760
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+bind port 5762 for SERIAL1
+SERIAL1 on TCP port 5762
+bind port 5763 for SERIAL2
+SERIAL2 on TCP port 5763
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Smoothing reset at 0.001
+Closed connection on SERIAL0
+New connection on SERIAL0
+validate_structures:538: Validating structures
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Closed connection on SERIAL0
+Exitting
+
+===== SITL start 2026-07-07T02:28:08.122707+00:00 =====
+/home/user/ai-folder/ardupilot/build/sitl/bin/arducopter --model quad --home=37.5665,126.9780,20,0 --defaults /home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Suggested EK3_DRAG_BCOEF_* = 17.209, EK3_DRAG_MCOEF = 0.209
+Home: 37.566500 126.978000 alt=20.000000m hdg=0.000000
+Starting sketch 'ArduCopter'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+Connection on serial port 5760
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+bind port 5762 for SERIAL1
+SERIAL1 on TCP port 5762
+bind port 5763 for SERIAL2
+SERIAL2 on TCP port 5763
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Smoothing reset at 0.001
+Closed connection on SERIAL0
+New connection on SERIAL0
+validate_structures:538: Validating structures
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Closed connection on SERIAL0
+Exitting
+
+===== SITL start 2026-07-07T02:28:40.609434+00:00 =====
+/home/user/ai-folder/ardupilot/build/sitl/bin/arducopter --model quad --home=37.5665,126.9780,20,0 --defaults /home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Suggested EK3_DRAG_BCOEF_* = 17.209, EK3_DRAG_MCOEF = 0.209
+Home: 37.566500 126.978000 alt=20.000000m hdg=0.000000
+Starting sketch 'ArduCopter'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+Connection on serial port 5760
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+bind port 5762 for SERIAL1
+SERIAL1 on TCP port 5762
+bind port 5763 for SERIAL2
+SERIAL2 on TCP port 5763
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Smoothing reset at 0.001
+Closed connection on SERIAL0
+New connection on SERIAL0
+validate_structures:538: Validating structures
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Closed connection on SERIAL0
+Exitting
+
+===== SITL start 2026-07-07T02:29:12.501710+00:00 =====
+/home/user/ai-folder/ardupilot/build/sitl/bin/arducopter --model quad --home=37.5665,126.9780,20,0 --defaults /home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Suggested EK3_DRAG_BCOEF_* = 17.209, EK3_DRAG_MCOEF = 0.209
+Home: 37.566500 126.978000 alt=20.000000m hdg=0.000000
+Starting sketch 'ArduCopter'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+Connection on serial port 5760
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+bind port 5762 for SERIAL1
+SERIAL1 on TCP port 5762
+bind port 5763 for SERIAL2
+SERIAL2 on TCP port 5763
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Smoothing reset at 0.001
+Closed connection on SERIAL0
+New connection on SERIAL0
+validate_structures:538: Validating structures
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Closed connection on SERIAL0
+Exitting
+
+===== SITL start 2026-07-07T02:29:44.687838+00:00 =====
+/home/user/ai-folder/ardupilot/build/sitl/bin/arducopter --model quad --home=37.5665,126.9780,20,0 --defaults /home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Suggested EK3_DRAG_BCOEF_* = 17.209, EK3_DRAG_MCOEF = 0.209
+Home: 37.566500 126.978000 alt=20.000000m hdg=0.000000
+Starting sketch 'ArduCopter'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+Connection on serial port 5760
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+bind port 5762 for SERIAL1
+SERIAL1 on TCP port 5762
+bind port 5763 for SERIAL2
+SERIAL2 on TCP port 5763
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Smoothing reset at 0.001
+Closed connection on SERIAL0
+Waiting for connection ....
+
+===== MAVProxy start 2026-07-07T02:29:45.021311+00:00 =====
+/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/.venv/bin/mavproxy.py --master=tcp:127.0.0.1:5760 --out=udp:127.0.0.1:14550 --daemon --non-interactive
+Connection on serial port 0
+validate_structures:538: Validating structures
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Connect tcp:127.0.0.1:5760 source_system=255
+Log Directory: 
+Telemetry log: mav.tlog
+Waiting for heartbeat from tcp:127.0.0.1:5760
+AP: RCInput: decoding UDP (Pulses)
+AP: Calibrating barometer
+Detected vehicle 1:1 on link 0
+online system 1
+STABILIZE> Mode STABILIZE
+AP: ArduCopter V4.8.0-dev (5152cde4)
+AP: 56d88d0b757444f09b8c8d07e131de9e
+AP: Frame: QUAD/PLUS
+Received 1382 parameters (ftp)
+Saved 1382 parameters to mav.parm
+AP: Barometer 1 calibration complete
+AP: Barometer 2 calibration complete
+Init Gyro**
+AP: ArduPilot Ready
+AP: AHRS: DCM active
+AP: GPS 1: specified as MAV
+AP: RC7: SaveWaypoint LOW
+Got COMMAND_ACK: SET_MESSAGE_INTERVAL: ACCEPTED
+Got COMMAND_ACK: SET_MESSAGE_INTERVAL: ACCEPTED
+Got COMMAND_ACK: SET_MESSAGE_INTERVAL: DENIED
+Got COMMAND_ACK: SET_MESSAGE_INTERVAL: ACCEPTED
+Got COMMAND_ACK: SET_MESSAGE_INTERVAL: ACCEPTED
+Got COMMAND_ACK: SET_MESSAGE_INTERVAL: ACCEPTED
+AP: No ap_message for mavlink id (253)
+fence present
+fence enabled
+Flight battery 100 percent
+AP: EKF3 IMU0 initialised
+AP: EKF3 IMU1 initialised
+AP: AHRS: EKF3 active
+AP: EKF3 IMU1 tilt alignment complete
+AP: EKF3 IMU0 tilt alignment complete
+AP: EKF3 IMU1 MAG0 initial yaw alignment complete
+AP: EKF3 IMU0 MAG0 initial yaw alignment complete
+AP: GPS 1: detected MAV
+GPS lock at 20 meters
+GUIDED> Mode GUIDED
+Got COMMAND_ACK: COMPONENT_ARM_DISARM: FAILED
+AP: Arm: GPS 1: not healthy
+AP: Arm: Fence requires position
+GPS fix lost
+RTL> Mode RTL
+AP: PreArm: GPS 1: Bad fix
+AP: PreArm: Fence requires position
+Unloading module link
+Unloading module signing
+Unloading module log
+Unloading module wp
+Unloading module rally
+Unloading module fence
+Unloading module ftp
+Unloading module param
+Unloading module relay
+Unloading module tuneopt
+Unloading module arm
+Unloading module mode
+Unloading module calibration
+Unloading module rc
+Unloading module auxopt
+Unloading module misc
+Unloading module cmdlong
+Unloading module battery
+Unloading module terrain
+Unloading module output
+Unloading module adsb
+Unloading module layout
+Closed connection on SERIAL0
+Exitting
+
+===== SITL start 2026-07-07T02:30:19.247419+00:00 =====
+/home/user/ai-folder/ardupilot/build/sitl/bin/arducopter --model quad --home=37.5665,126.9780,20,0 --defaults /home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Suggested EK3_DRAG_BCOEF_* = 17.209, EK3_DRAG_MCOEF = 0.209
+Home: 37.566500 126.978000 alt=20.000000m hdg=0.000000
+Starting sketch 'ArduCopter'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+Connection on serial port 5760
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+bind port 5762 for SERIAL1
+SERIAL1 on TCP port 5762
+bind port 5763 for SERIAL2
+SERIAL2 on TCP port 5763
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Smoothing reset at 0.001
+Closed connection on SERIAL0
+Waiting for connection ....
+
+===== MAVProxy start 2026-07-07T02:30:19.548041+00:00 =====
+/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/.venv/bin/mavproxy.py --master=tcp:127.0.0.1:5760 --out=udp:127.0.0.1:14550 --daemon --non-interactive
+Connection on serial port 0
+validate_structures:538: Validating structures
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Connect tcp:127.0.0.1:5760 source_system=255
+Log Directory: 
+Telemetry log: mav.tlog
+Waiting for heartbeat from tcp:127.0.0.1:5760
+AP: RCInput: decoding UDP (Pulses)
+AP: Calibrating barometer
+Detected vehicle 1:1 on link 0
+online system 1
+STABILIZE> Mode STABILIZE
+AP: ArduCopter V4.8.0-dev (5152cde4)
+AP: 56d88d0b757444f09b8c8d07e131de9e
+AP: Frame: QUAD/PLUS
+Received 1382 parameters (ftp)
+Saved 1382 parameters to mav.parm
+AP: Barometer 1 calibration complete
+AP: Barometer 2 calibration complete
+Init Gyro**
+AP: ArduPilot Ready
+AP: AHRS: DCM active
+AP: GPS 1: specified as MAV
+AP: RC7: SaveWaypoint LOW
+Got COMMAND_ACK: SET_MESSAGE_INTERVAL: ACCEPTED
+Got COMMAND_ACK: SET_MESSAGE_INTERVAL: ACCEPTED
+Got COMMAND_ACK: SET_MESSAGE_INTERVAL: DENIED
+Got COMMAND_ACK: SET_MESSAGE_INTERVAL: ACCEPTED
+Got COMMAND_ACK: SET_MESSAGE_INTERVAL: ACCEPTED
+Got COMMAND_ACK: SET_MESSAGE_INTERVAL: ACCEPTED
+AP: No ap_message for mavlink id (253)
+fence present
+fence enabled
+Flight battery 100 percent
+AP: EKF3 IMU0 initialised
+AP: EKF3 IMU1 initialised
+AP: AHRS: EKF3 active
+AP: EKF3 IMU1 tilt alignment complete
+AP: EKF3 IMU0 tilt alignment complete
+AP: EKF3 IMU1 MAG0 initial yaw alignment complete
+AP: EKF3 IMU0 MAG0 initial yaw alignment complete
+AP: GPS 1: detected MAV
+GPS lock at 20 meters
+GUIDED> Mode GUIDED
+Got COMMAND_ACK: COMPONENT_ARM_DISARM: FAILED
+AP: Arm: GPS 1: not healthy
+AP: Arm: Fence requires position
+GPS fix lost
+LAND> Mode LAND
+AP: PreArm: GPS 1: Bad fix
+AP: PreArm: Fence requires position
+Unloading module link
+Unloading module signing
+Unloading module log
+Unloading module wp
+Unloading module rally
+Unloading module fence
+Unloading module ftp
+Unloading module param
+Unloading module relay
+Unloading module tuneopt
+Unloading module arm
+Unloading module mode
+Unloading module calibration
+Unloading module rc
+Unloading module auxopt
+Unloading module misc
+Unloading module cmdlong
+Unloading module battery
+Unloading module terrain
+Unloading module output
+Unloading module adsb
+Unloading module layout
+Closed connection on SERIAL0
+Exitting
+
+===== SITL start 2026-07-07T02:30:53.485816+00:00 =====
+/home/user/ai-folder/ardupilot/build/sitl/bin/arducopter --model quad --home=37.5665,126.9780,20,0 --defaults /home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Suggested EK3_DRAG_BCOEF_* = 17.209, EK3_DRAG_MCOEF = 0.209
+Home: 37.566500 126.978000 alt=20.000000m hdg=0.000000
+Starting sketch 'ArduCopter'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+Connection on serial port 5760
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+bind port 5762 for SERIAL1
+SERIAL1 on TCP port 5762
+bind port 5763 for SERIAL2
+SERIAL2 on TCP port 5763
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Smoothing reset at 0.001
+Closed connection on SERIAL0
+Waiting for connection ....
+
+===== MAVProxy start 2026-07-07T02:30:53.785315+00:00 =====
+/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/.venv/bin/mavproxy.py --master=tcp:127.0.0.1:5760 --out=udp:127.0.0.1:14550 --daemon --non-interactive
+Connection on serial port 0
+validate_structures:538: Validating structures
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Connect tcp:127.0.0.1:5760 source_system=255
+Log Directory: 
+Telemetry log: mav.tlog
+Waiting for heartbeat from tcp:127.0.0.1:5760
+AP: RCInput: decoding UDP (Pulses)
+AP: Calibrating barometer
+Detected vehicle 1:1 on link 0
+online system 1
+STABILIZE> Mode STABILIZE
+AP: ArduCopter V4.8.0-dev (5152cde4)
+AP: 56d88d0b757444f09b8c8d07e131de9e
+AP: Frame: QUAD/PLUS
+Received 1382 parameters (ftp)
+Saved 1382 parameters to mav.parm
+AP: Barometer 1 calibration complete
+AP: Barometer 2 calibration complete
+Init Gyro**
+AP: ArduPilot Ready
+AP: AHRS: DCM active
+AP: GPS 1: specified as MAV
+AP: RC7: SaveWaypoint LOW
+Got COMMAND_ACK: SET_MESSAGE_INTERVAL: ACCEPTED
+Got COMMAND_ACK: SET_MESSAGE_INTERVAL: ACCEPTED
+Got COMMAND_ACK: SET_MESSAGE_INTERVAL: DENIED
+Got COMMAND_ACK: SET_MESSAGE_INTERVAL: ACCEPTED
+Got COMMAND_ACK: SET_MESSAGE_INTERVAL: ACCEPTED
+Got COMMAND_ACK: SET_MESSAGE_INTERVAL: ACCEPTED
+AP: No ap_message for mavlink id (253)
+fence present
+fence enabled
+Flight battery 100 percent
+AP: EKF3 IMU0 initialised
+AP: EKF3 IMU1 initialised
+AP: AHRS: EKF3 active
+AP: EKF3 IMU1 tilt alignment complete
+AP: EKF3 IMU0 tilt alignment complete
+AP: EKF3 IMU1 MAG0 initial yaw alignment complete
+AP: EKF3 IMU0 MAG0 initial yaw alignment complete
+AP: GPS 1: detected MAV
+GPS lock at 20 meters
+GUIDED> Mode GUIDED
+Got COMMAND_ACK: COMPONENT_ARM_DISARM: FAILED
+AP: Arm: GPS 1: not healthy
+AP: Arm: Fence requires position
+GPS fix lost
+BRAKE> Mode BRAKE
+AP: PreArm: GPS 1: Bad fix
+AP: PreArm: Fence requires position
+Unloading module link
+Unloading module signing
+Unloading module log
+Unloading module wp
+Unloading module rally
+Unloading module fence
+Unloading module ftp
+Unloading module param
+Unloading module relay
+Unloading module tuneopt
+Unloading module arm
+Unloading module mode
+Unloading module calibration
+Unloading module rc
+Unloading module auxopt
+Unloading module misc
+Unloading module cmdlong
+Unloading module battery
+Unloading module terrain
+Unloading module output
+Unloading module adsb
+Unloading module layout
+Closed connection on SERIAL0
+Exitting
+
+===== SITL start 2026-07-07T02:31:27.895447+00:00 =====
+/home/user/ai-folder/ardupilot/build/sitl/bin/arducopter --model quad --home=37.5665,126.9780,20,0 --defaults /home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Suggested EK3_DRAG_BCOEF_* = 17.209, EK3_DRAG_MCOEF = 0.209
+Home: 37.566500 126.978000 alt=20.000000m hdg=0.000000
+Starting sketch 'ArduCopter'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+Connection on serial port 5760
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+bind port 5762 for SERIAL1
+SERIAL1 on TCP port 5762
+bind port 5763 for SERIAL2
+SERIAL2 on TCP port 5763
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Smoothing reset at 0.001
+Closed connection on SERIAL0
+Waiting for connection ....
+
+===== MAVProxy start 2026-07-07T02:31:28.191789+00:00 =====
+/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/.venv/bin/mavproxy.py --master=tcp:127.0.0.1:5760 --out=udp:127.0.0.1:14550 --daemon --non-interactive
+Connection on serial port 0
+validate_structures:538: Validating structures
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Connect tcp:127.0.0.1:5760 source_system=255
+Log Directory: 
+Telemetry log: mav.tlog
+Waiting for heartbeat from tcp:127.0.0.1:5760
+AP: RCInput: decoding UDP (Pulses)
+AP: Calibrating barometer
+Detected vehicle 1:1 on link 0
+online system 1
+STABILIZE> Mode STABILIZE
+AP: ArduCopter V4.8.0-dev (5152cde4)
+AP: 56d88d0b757444f09b8c8d07e131de9e
+AP: Frame: QUAD/PLUS
+Received 1382 parameters (ftp)
+Saved 1382 parameters to mav.parm
+AP: Barometer 1 calibration complete
+AP: Barometer 2 calibration complete
+Init Gyro**
+AP: ArduPilot Ready
+AP: AHRS: DCM active
+AP: GPS 1: specified as MAV
+AP: RC7: SaveWaypoint LOW
+Got COMMAND_ACK: SET_MESSAGE_INTERVAL: ACCEPTED
+Got COMMAND_ACK: SET_MESSAGE_INTERVAL: ACCEPTED
+Got COMMAND_ACK: SET_MESSAGE_INTERVAL: DENIED
+Got COMMAND_ACK: SET_MESSAGE_INTERVAL: ACCEPTED
+Got COMMAND_ACK: SET_MESSAGE_INTERVAL: ACCEPTED
+Got COMMAND_ACK: SET_MESSAGE_INTERVAL: ACCEPTED
+AP: No ap_message for mavlink id (253)
+fence present
+fence enabled
+Flight battery 100 percent
+AP: EKF3 IMU0 initialised
+AP: EKF3 IMU1 initialised
+AP: AHRS: EKF3 active
+AP: EKF3 IMU1 tilt alignment complete
+AP: EKF3 IMU0 tilt alignment complete
+AP: EKF3 IMU1 MAG0 initial yaw alignment complete
+AP: EKF3 IMU0 MAG0 initial yaw alignment complete
+AP: GPS 1: detected MAV
+GPS lock at 20 meters
+GUIDED> Mode GUIDED
+Got COMMAND_ACK: COMPONENT_ARM_DISARM: FAILED
+AP: Arm: GPS 1: not healthy
+AP: Arm: Fence requires position
+GPS fix lost
+LOITER> Mode LOITER
+AP: PreArm: GPS 1: Bad fix
+AP: PreArm: Fence requires position
+Unloading module link
+Unloading module signing
+Unloading module log
+Unloading module wp
+Unloading module rally
+Unloading module fence
+Unloading module ftp
+Unloading module param
+Unloading module relay
+Unloading module tuneopt
+Unloading module arm
+Unloading module mode
+Unloading module calibration
+Unloading module rc
+Unloading module auxopt
+Unloading module misc
+Unloading module cmdlong
+Unloading module battery
+Unloading module terrain
+Unloading module output
+Unloading module adsb
+Unloading module layout
+Exception in thread log_writer:
+Fatal Python error: _enter_buffered_busy: could not acquire lock for <_io.BufferedWriter name='<stderr>'> at interpreter shutdown, possibly due to daemon threads
+Python runtime state: finalizing (tstate=0x0000000000ba5748)
+
+Current thread 0x000072ae56eae080 (most recent call first):
+  <no Python frame>
+
+Extension modules: numpy._core._multiarray_umath, numpy.linalg._umath_linalg, PIL._imaging, kiwisolver._cext (total: 4)
+Closed connection on SERIAL0
+Exitting
+
+===== SITL start 2026-07-07T02:32:05.670799+00:00 =====
+/home/user/ai-folder/ardupilot/build/sitl/bin/arducopter --model quad --home=37.5665,126.9780,20,0 --defaults /home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Suggested EK3_DRAG_BCOEF_* = 17.209, EK3_DRAG_MCOEF = 0.209
+Home: 37.566500 126.978000 alt=20.000000m hdg=0.000000
+Starting sketch 'ArduCopter'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+Connection on serial port 5760
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+bind port 5762 for SERIAL1
+SERIAL1 on TCP port 5762
+bind port 5763 for SERIAL2
+SERIAL2 on TCP port 5763
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Smoothing reset at 0.001
+Closed connection on SERIAL0
+New connection on SERIAL0
+validate_structures:538: Validating structures
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Closed connection on SERIAL0
+Exitting
+
+===== SITL start 2026-07-07T02:32:37.563026+00:00 =====
+/home/user/ai-folder/ardupilot/build/sitl/bin/arducopter --model quad --home=37.5665,126.9780,20,0 --defaults /home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Suggested EK3_DRAG_BCOEF_* = 17.209, EK3_DRAG_MCOEF = 0.209
+Home: 37.566500 126.978000 alt=20.000000m hdg=0.000000
+Starting sketch 'ArduCopter'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+Connection on serial port 5760
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+bind port 5762 for SERIAL1
+SERIAL1 on TCP port 5762
+bind port 5763 for SERIAL2
+SERIAL2 on TCP port 5763
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Smoothing reset at 0.001
+Closed connection on SERIAL0
+New connection on SERIAL0
+validate_structures:538: Validating structures
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Closed connection on SERIAL0
+Exitting
+
+===== SITL start 2026-07-07T02:33:09.457720+00:00 =====
+/home/user/ai-folder/ardupilot/build/sitl/bin/arducopter --model quad --home=37.5665,126.9780,20,0 --defaults /home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Suggested EK3_DRAG_BCOEF_* = 17.209, EK3_DRAG_MCOEF = 0.209
+Home: 37.566500 126.978000 alt=20.000000m hdg=0.000000
+Starting sketch 'ArduCopter'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+Connection on serial port 5760
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+bind port 5762 for SERIAL1
+SERIAL1 on TCP port 5762
+bind port 5763 for SERIAL2
+SERIAL2 on TCP port 5763
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Smoothing reset at 0.001
+Closed connection on SERIAL0
+New connection on SERIAL0
+validate_structures:538: Validating structures
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Closed connection on SERIAL0
+Exitting
+
+===== SITL start 2026-07-07T02:33:41.555670+00:00 =====
+/home/user/ai-folder/ardupilot/build/sitl/bin/arducopter --model quad --home=37.5665,126.9780,20,0 --defaults /home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Suggested EK3_DRAG_BCOEF_* = 17.209, EK3_DRAG_MCOEF = 0.209
+Home: 37.566500 126.978000 alt=20.000000m hdg=0.000000
+Starting sketch 'ArduCopter'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+Connection on serial port 5760
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+bind port 5762 for SERIAL1
+SERIAL1 on TCP port 5762
+bind port 5763 for SERIAL2
+SERIAL2 on TCP port 5763
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Smoothing reset at 0.001
+Closed connection on SERIAL0
+New connection on SERIAL0
+validate_structures:538: Validating structures
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Loaded defaults from @ROMFS/default_params/copter.parm,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T022735_750985Z_E19_mode_command/sitl_defaults.parm
+Closed connection on SERIAL0
+Exitting

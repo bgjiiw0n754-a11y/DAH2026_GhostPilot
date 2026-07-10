@@ -1,0 +1,2 @@
+payload,route,required_access,required_state,required_params,blocked_reason,not_claimed
+param-edit,fc-direct,MAVLink parameter write access,target parameters exist and are writable,"FENCE_RADIUS, FENCE_ACTION, WPNAV_SPEED, FS_EKF_ACTION",,remote exploit; credential bypass; RF GNSS spoofing; RF jamming; MAVLink signing bypass; real vehicle takeover; full mission takeover
