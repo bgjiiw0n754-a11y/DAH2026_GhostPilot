@@ -1,0 +1,1 @@
+objective,profile,route,decision_changed,stealth_budget,stealth_score,constraint_violations,final_target_drift_m,final_official_drift_m,mean_target_error_m,commanded_speed_max_mps,commanded_accel_max_mps2,abrupt_jump_count,gps_fix_stability,verdict,reason,bundle

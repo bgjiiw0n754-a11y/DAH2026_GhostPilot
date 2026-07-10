@@ -1,0 +1,59 @@
+{
+  "claim_tested": "planner route relaxation beyond FC direct",
+  "experiment": "E13_route_relaxation",
+  "metrics": {
+    "objective": "geofence",
+    "routes": [
+      {
+        "bundle": "",
+        "decision_changed": 1,
+        "final_official_drift_m": 23.947109086812972,
+        "final_target_drift_m": 23.95304507599846,
+        "objective": "geofence",
+        "profile": "stealth-opt",
+        "reason": "GPS_INPUT reflected and selected decision changed",
+        "reflection_rate": 0.9016393442622951,
+        "route": "fc-direct",
+        "stealth_score": 0.479061,
+        "verdict": "pass"
+      },
+      {
+        "bundle": "",
+        "decision_changed": 1,
+        "final_official_drift_m": 23.947109086812972,
+        "final_target_drift_m": 23.95304507599846,
+        "objective": "geofence",
+        "profile": "stealth-opt",
+        "reason": "GPS_INPUT reflected and selected decision changed",
+        "reflection_rate": 0.9,
+        "route": "mavproxy-udp",
+        "stealth_score": 0.479061,
+        "verdict": "pass"
+      },
+      {
+        "bundle": "",
+        "decision_changed": 1,
+        "final_official_drift_m": 23.947109086812972,
+        "final_target_drift_m": 23.95304507599846,
+        "objective": "geofence",
+        "profile": "stealth-opt",
+        "reason": "GPS_INPUT reflected and selected decision changed",
+        "reflection_rate": 0.9016393442622951,
+        "route": "companion",
+        "stealth_score": 0.479061,
+        "verdict": "pass"
+      }
+    ]
+  },
+  "not_claimed": [
+    "remote exploit",
+    "credential bypass",
+    "RF GNSS spoofing",
+    "RF jamming",
+    "MAVLink signing bypass",
+    "real vehicle takeover",
+    "full mission takeover"
+  ],
+  "reason": "planner payload reproduced through direct and at least one non-direct route",
+  "verdict": "pass"
+}

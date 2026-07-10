@@ -1,0 +1,2 @@
+timestamp,experiment,case,event_type,elapsed_s,sample_index,target_drift_m,official_drift_m,mode,mission_seq,fence_breach_status,status_text,evidence_message_type
+2026-07-07T01:05:45.798960+00:00,E11_mission_decision_matrix,geofence_stealth_opt,fence_breach,13.79110836982727,23,23.95304507599846,23.947109086812972,STABILIZE,0,,Field Elevation Set: 20m,FENCE_STATUS

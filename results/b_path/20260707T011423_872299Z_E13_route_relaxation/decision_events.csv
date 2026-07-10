@@ -1,0 +1,4 @@
+timestamp,experiment,case,event_type,elapsed_s,sample_index,target_drift_m,official_drift_m,mode,mission_seq,fence_breach_status,status_text,evidence_message_type
+2026-07-07T01:14:46.819927+00:00,E13_route_relaxation,fc-direct_stealth_opt,fence_breach,13.926309823989868,23,23.95304507599846,23.947109086812972,STABILIZE,0,,Field Elevation Set: 20m,FENCE_STATUS
+2026-07-07T01:15:22.667175+00:00,E13_route_relaxation,mavproxy-udp_stealth_opt,fence_breach,13.738930702209473,23,23.95304507599846,23.947109086812972,STABILIZE,0,,Field Elevation Set: 20m,FENCE_STATUS
+2026-07-07T01:15:56.718505+00:00,E13_route_relaxation,companion_stealth_opt,fence_breach,13.850593328475952,23,23.95304507599846,23.947109086812972,STABILIZE,0,,Field Elevation Set: 20m,FENCE_STATUS

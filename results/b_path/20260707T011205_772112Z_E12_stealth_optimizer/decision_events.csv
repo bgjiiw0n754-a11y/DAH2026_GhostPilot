@@ -1,0 +1,5 @@
+timestamp,experiment,case,event_type,elapsed_s,sample_index,target_drift_m,official_drift_m,mode,mission_seq,fence_breach_status,status_text,evidence_message_type
+2026-07-07T01:12:29.821915+00:00,E12_stealth_optimizer,linear,fence_breach,15.007718086242676,25,24.971897992434588,24.96923129638461,STABILIZE,0,,Field Elevation Set: 20m,FENCE_STATUS
+2026-07-07T01:13:03.371635+00:00,E12_stealth_optimizer,ekf_smooth,fence_breach,13.405090808868408,22,24.70997066760158,24.70468746262711,STABILIZE,0,,Field Elevation Set: 20m,FENCE_STATUS
+2026-07-07T01:13:38.664921+00:00,E12_stealth_optimizer,adaptive,fence_breach,15.045055627822876,25,24.971897992434588,24.96923129638461,STABILIZE,0,,Field Elevation Set: 20m,FENCE_STATUS
+2026-07-07T01:14:12.907343+00:00,E12_stealth_optimizer,stealth_opt,fence_breach,14.008877992630005,23,23.95304507599846,23.947109086812972,STABILIZE,0,,Field Elevation Set: 20m,FENCE_STATUS

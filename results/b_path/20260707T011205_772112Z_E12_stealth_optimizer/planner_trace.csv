@@ -1,0 +1,6 @@
+objective,available,expected_impact,expected_cost,score,reason,selected
+geofence,1,0.95,0.25,0.7,fence parameters available,1
+auto-waypoint,1,0.7,0.45,0.24999999999999994,single waypoint mission can be uploaded in SITL,0
+rtl,1,0.55,0.55,0.0,RTL requires mode change evidence after position event,0
+land,1,0.45,0.6,-0.14999999999999997,LAND evidence is mode/status dependent,0
+failsafe,1,0.35,0.75,-0.4,failsafe evidence is noisy and may not trigger under bounded GPS_INPUT,0

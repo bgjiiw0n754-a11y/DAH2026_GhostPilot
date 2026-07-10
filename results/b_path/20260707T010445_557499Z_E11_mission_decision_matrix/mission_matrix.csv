@@ -1,0 +1,11 @@
+objective,case,verdict,reason,decision_changed,event_type,decision_time_s,drift_at_decision_m,minimum_drift_m,reflection_rate,stealth_score,route,profile,bundle
+geofence,baseline,pass,baseline did not trigger decision,0,,0.0,0.0,0.0,0.0,0.0,fc-direct,baseline,
+geofence,stealth_opt,pass,attack changed decision while baseline did not,1,fence_breach,13.79110836982727,0.0,23.947109086812972,0.9166666666666666,0.479061,fc-direct,stealth-opt,
+auto-waypoint,baseline,fail,no earlier mission advance,0,,0.0,0.0,0.0,0.0,0.0,fc-direct,baseline,
+auto-waypoint,stealth_opt,fail,no earlier mission advance,0,,0.0,0.0,0.0,0.9367088607594937,0.623898,fc-direct,stealth-opt,
+rtl,baseline,pass,baseline did not trigger decision,0,,0.0,0.0,0.0,0.0,0.0,fc-direct,baseline,
+rtl,stealth_opt,fail,no isolated decision change,0,,0.0,0.0,0.0,0.925,0.623898,fc-direct,stealth-opt,
+land,baseline,pass,baseline did not trigger decision,0,,0.0,0.0,0.0,0.0,0.0,fc-direct,baseline,
+land,stealth_opt,fail,no isolated decision change,0,,0.0,0.0,0.0,0.9367088607594937,0.623898,fc-direct,stealth-opt,
+failsafe,baseline,pass,baseline did not trigger decision,0,,0.0,0.0,0.0,0.0,0.0,fc-direct,baseline,
+failsafe,stealth_opt,fail,no isolated decision change,0,,0.0,0.0,0.0,0.0,4391298.280848,fc-direct,stealth-opt,

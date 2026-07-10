@@ -1,0 +1,4 @@
+route,objective,profile,verdict,reason,decision_changed,reflection_rate,final_target_drift_m,final_official_drift_m,stealth_score,bundle
+fc-direct,geofence,stealth-opt,pass,GPS_INPUT reflected and selected decision changed,1,0.9016393442622951,23.95304507599846,23.947109086812972,0.479061,
+mavproxy-udp,geofence,stealth-opt,pass,GPS_INPUT reflected and selected decision changed,1,0.9,23.95304507599846,23.947109086812972,0.479061,
+companion,geofence,stealth-opt,pass,GPS_INPUT reflected and selected decision changed,1,0.9016393442622951,23.95304507599846,23.947109086812972,0.479061,
