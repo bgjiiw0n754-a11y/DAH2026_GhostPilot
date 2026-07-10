@@ -1,0 +1,22 @@
+payload,route,variant,impact_type,impact_confirmed,decision_signal,mode,mission_seq,parameter,before,after,notes
+gps-input,fc-direct,stealth-opt,geofence-decision,1,FENCE_STATUS breach,,,,,,reused latest GPS_INPUT evidence bundle
+gps-input,mavproxy-udp,stealth-opt,geofence-decision,1,FENCE_STATUS breach,,,,,,reused latest GPS_INPUT evidence bundle
+gps-input,companion,stealth-opt,geofence-decision,1,FENCE_STATUS breach,,,,,,reused latest GPS_INPUT evidence bundle
+mode-command,fc-direct,RTL,mode-change,1,HEARTBEAT.mode=RTL,RTL,,,,,HEARTBEAT mode changed to RTL
+mode-command,fc-direct,LAND,mode-change,1,HEARTBEAT.mode=LAND,LAND,,,,,HEARTBEAT mode changed to LAND
+mode-command,fc-direct,BRAKE,mode-change,1,HEARTBEAT.mode=BRAKE,BRAKE,,,,,HEARTBEAT mode changed to BRAKE
+mode-command,fc-direct,LOITER,mode-change,1,HEARTBEAT.mode=LOITER,LOITER,,,,,HEARTBEAT mode changed to LOITER
+mode-command,mavproxy-udp,RTL,mode-change,1,HEARTBEAT.mode=RTL,RTL,,,,,HEARTBEAT mode changed to RTL
+mode-command,mavproxy-udp,LAND,mode-change,1,HEARTBEAT.mode=LAND,LAND,,,,,HEARTBEAT mode changed to LAND
+mode-command,mavproxy-udp,BRAKE,mode-change,1,HEARTBEAT.mode=BRAKE,BRAKE,,,,,HEARTBEAT mode changed to BRAKE
+mode-command,mavproxy-udp,LOITER,mode-change,1,HEARTBEAT.mode=LOITER,LOITER,,,,,HEARTBEAT mode changed to LOITER
+mode-command,companion,RTL,mode-change,1,HEARTBEAT.mode=RTL,RTL,,,,,HEARTBEAT mode changed to RTL
+mode-command,companion,LAND,mode-change,1,HEARTBEAT.mode=LAND,LAND,,,,,HEARTBEAT mode changed to LAND
+mode-command,companion,BRAKE,mode-change,1,HEARTBEAT.mode=BRAKE,BRAKE,,,,,HEARTBEAT mode changed to BRAKE
+mode-command,companion,LOITER,mode-change,1,HEARTBEAT.mode=LOITER,LOITER,,,,,HEARTBEAT mode changed to LOITER
+mission-edit,fc-direct,single-waypoint-upload,mission-upload,1,MISSION_ACK/readback,,0,,,,mission upload ACK/readback confirmed
+param-edit,fc-direct,FENCE_RADIUS,parameter-change,1,PARAM_VALUE readback,,,FENCE_RADIUS,12.0,10.0,confirmed
+param-edit,fc-direct,FENCE_ACTION,parameter-change,1,PARAM_VALUE readback,,,FENCE_ACTION,1.0,0.0,confirmed
+param-edit,fc-direct,FS_EKF_ACTION,parameter-change,1,PARAM_VALUE readback,,,FS_EKF_ACTION,1.0,0.0,confirmed
+param-edit,fc-direct,WP_SPD,parameter-change,1,PARAM_VALUE readback,,,WP_SPD,10.0,2.5,confirmed
+telemetry-deception,fc-direct,GLOBAL_POSITION_INT,telemetry-only,1,negative FC reflection control,,,,,,FC navigation input did not follow injected GLOBAL_POSITION_INT

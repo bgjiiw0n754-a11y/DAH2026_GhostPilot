@@ -1,0 +1,1 @@
+timestamp,experiment,phase,sample_index,target_lat,target_lon,target_alt,north_m,east_m,target_drift_m,vn,ve,vd,commanded_speed_mps,commanded_accel_mps2,profile,engine,route

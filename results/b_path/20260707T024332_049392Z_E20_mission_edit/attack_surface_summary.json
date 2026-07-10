@@ -1,0 +1,23 @@
+{
+  "payload": "mission-edit",
+  "verdict": {
+    "claim_tested": "MAVLink mission-edit payload",
+    "experiment": "E20_mission_edit",
+    "metrics": {
+      "max_mission_seq": 0,
+      "readback_count": 2,
+      "uploaded": true
+    },
+    "not_claimed": [
+      "remote exploit",
+      "credential bypass",
+      "RF GNSS spoofing",
+      "RF jamming",
+      "MAVLink signing bypass",
+      "real vehicle takeover",
+      "full mission takeover"
+    ],
+    "reason": "mission upload ACK/readback confirmed",
+    "verdict": "pass"
+  }
+}

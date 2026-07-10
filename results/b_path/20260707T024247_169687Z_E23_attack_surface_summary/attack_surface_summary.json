@@ -1,0 +1,50 @@
+{
+  "fc_impact_payloads": [
+    "gps-input",
+    "mode-command",
+    "param-edit"
+  ],
+  "final_claim": "authorized SITL deterministic MAVLink post-access payload matrix; no AI, no remote intrusion, no signing bypass, no RF attack",
+  "gcs_or_log_impact_payloads": [
+    "telemetry-deception"
+  ],
+  "passed_payloads": [
+    "gps-input",
+    "mode-command",
+    "param-edit",
+    "telemetry-deception"
+  ],
+  "source_bundle": "/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T024241_334809Z_E18_payload_matrix",
+  "verdict": {
+    "claim_tested": "MAVLink post-access attack surface summary without AI",
+    "experiment": "E23_attack_surface_summary",
+    "metrics": {
+      "fc_impact_payloads": [
+        "gps-input",
+        "mode-command",
+        "param-edit"
+      ],
+      "gcs_or_log_impact_payloads": [
+        "telemetry-deception"
+      ],
+      "passed_payloads": [
+        "gps-input",
+        "mode-command",
+        "param-edit",
+        "telemetry-deception"
+      ],
+      "source_bundle": "/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T024241_334809Z_E18_payload_matrix"
+    },
+    "not_claimed": [
+      "remote exploit",
+      "credential bypass",
+      "RF GNSS spoofing",
+      "RF jamming",
+      "MAVLink signing bypass",
+      "real vehicle takeover",
+      "full mission takeover"
+    ],
+    "reason": "deterministic payload matrix summarized",
+    "verdict": "pass"
+  }
+}
