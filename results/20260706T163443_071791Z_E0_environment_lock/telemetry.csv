@@ -1,0 +1,1 @@
+timestamp,elapsed_s,experiment,phase,sample_index,target_lat,target_lon,target_alt,target_drift_m,obs_lat,obs_lon,obs_alt,official_drift_m,target_error_m,reflected,gps_fix_type,gps_satellites,gps_raw_lat,gps_raw_lon,gps_raw_alt,vn,ve,vd,commanded_speed_mps,commanded_accel_mps2,message_type,status_text,mode,fence_breach_status,fence_breach_count,fence_breach_type

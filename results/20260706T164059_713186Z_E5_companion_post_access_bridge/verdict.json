@@ -1,0 +1,34 @@
+{
+  "claim_tested": "post-access companion bridge model reproduces GPS_INPUT reflection",
+  "experiment": "E5_companion_post_access_bridge",
+  "metrics": {
+    "abrupt_jump_count": 0,
+    "commanded_accel_max_mps2": 1.0799999999999998,
+    "commanded_accel_min_mps2": 7.944109290391274e-15,
+    "commanded_speed_max_mps": 2.990000000000002,
+    "commanded_speed_min_mps": 0.29000000000000004,
+    "fence_breach_count": 0,
+    "fence_breach_observed": false,
+    "final_official_drift_m": 19.969749120337383,
+    "final_target_drift_m": 19.97752052332556,
+    "global_position_available": true,
+    "gps_fix_stability": 1.0,
+    "gps_raw_available": true,
+    "max_target_error_m": 1.2049046878115057,
+    "mean_target_drift_m": 12.75529094877362,
+    "mean_target_error_m": 0.02974882868104992,
+    "observed_count": 70,
+    "reflected_count": 67,
+    "reflection_rate": 0.9571428571428572
+  },
+  "not_claimed": [
+    "remote exploit",
+    "credential bypass",
+    "RF GNSS spoofing",
+    "RF jamming",
+    "MAVLink signing bypass",
+    "mission takeover before E6 pass"
+  ],
+  "reason": "reflection thresholds passed",
+  "verdict": "pass"
+}

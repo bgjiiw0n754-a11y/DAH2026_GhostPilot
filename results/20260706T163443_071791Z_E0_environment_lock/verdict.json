@@ -1,0 +1,15 @@
+{
+  "claim_tested": "SITL environment lock",
+  "experiment": "E0_environment_lock",
+  "metrics": {},
+  "not_claimed": [
+    "remote exploit",
+    "credential bypass",
+    "RF GNSS spoofing",
+    "RF jamming",
+    "MAVLink signing bypass",
+    "mission takeover before E6 pass"
+  ],
+  "reason": "environment fields captured",
+  "verdict": "pass"
+}

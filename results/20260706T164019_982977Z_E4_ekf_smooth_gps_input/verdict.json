@@ -1,0 +1,39 @@
+{
+  "claim_tested": "ekf-smooth GPS_INPUT profile metrics",
+  "comparison_against_linear": {
+    "comparison_pass": true,
+    "comparison_reason": "smooth profile preserved reflection and improved at least one kinematic metric",
+    "linear_bundle": "/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260706T163954_662068Z_E4_linear_gps_input"
+  },
+  "experiment": "E4_ekf_smooth_gps_input",
+  "metrics": {
+    "abrupt_jump_count": 0,
+    "commanded_accel_max_mps2": 1.0799999999999998,
+    "commanded_accel_min_mps2": 7.944109290391274e-15,
+    "commanded_speed_max_mps": 2.990000000000002,
+    "commanded_speed_min_mps": 0.29000000000000004,
+    "fence_breach_count": 0,
+    "fence_breach_observed": false,
+    "final_official_drift_m": 19.969749120337383,
+    "final_target_drift_m": 19.97752052332556,
+    "global_position_available": true,
+    "gps_fix_stability": 1.0,
+    "gps_raw_available": true,
+    "max_target_error_m": 1.4658053337714039,
+    "mean_target_drift_m": 11.943942096318311,
+    "mean_target_error_m": 0.08212933612365761,
+    "observed_count": 63,
+    "reflected_count": 60,
+    "reflection_rate": 0.9523809523809523
+  },
+  "not_claimed": [
+    "remote exploit",
+    "credential bypass",
+    "RF GNSS spoofing",
+    "RF jamming",
+    "MAVLink signing bypass",
+    "mission takeover before E6 pass"
+  ],
+  "reason": "reflection thresholds passed",
+  "verdict": "pass"
+}
