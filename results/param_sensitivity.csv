@@ -1,0 +1,65 @@
+experiment,detector,parameters,metric,value,condition
+A3-1_IForest_contamination,IsolationForest,contamination=0.01,정상오탐율(%),0.7,data=normal_flight.csv; split=70/30; seed=42; FP=test 이상비율; 탐지=drift별 200회 랜덤 test 샘플 위조 예측
+A3-1_IForest_contamination,IsolationForest,contamination=0.01,1m위조탐지율(%),0.0,data=normal_flight.csv; split=70/30; seed=42; FP=test 이상비율; 탐지=drift별 200회 랜덤 test 샘플 위조 예측
+A3-1_IForest_contamination,IsolationForest,contamination=0.01,5m위조탐지율(%),4.5,data=normal_flight.csv; split=70/30; seed=42; FP=test 이상비율; 탐지=drift별 200회 랜덤 test 샘플 위조 예측
+A3-1_IForest_contamination,IsolationForest,contamination=0.01,10m위조탐지율(%),10.0,data=normal_flight.csv; split=70/30; seed=42; FP=test 이상비율; 탐지=drift별 200회 랜덤 test 샘플 위조 예측
+A3-1_IForest_contamination,IsolationForest,contamination=0.03,정상오탐율(%),2.3,data=normal_flight.csv; split=70/30; seed=42; FP=test 이상비율; 탐지=drift별 200회 랜덤 test 샘플 위조 예측
+A3-1_IForest_contamination,IsolationForest,contamination=0.03,1m위조탐지율(%),1.0,data=normal_flight.csv; split=70/30; seed=42; FP=test 이상비율; 탐지=drift별 200회 랜덤 test 샘플 위조 예측
+A3-1_IForest_contamination,IsolationForest,contamination=0.03,5m위조탐지율(%),42.5,data=normal_flight.csv; split=70/30; seed=42; FP=test 이상비율; 탐지=drift별 200회 랜덤 test 샘플 위조 예측
+A3-1_IForest_contamination,IsolationForest,contamination=0.03,10m위조탐지율(%),48.0,data=normal_flight.csv; split=70/30; seed=42; FP=test 이상비율; 탐지=drift별 200회 랜덤 test 샘플 위조 예측
+A3-1_IForest_contamination,IsolationForest,contamination=0.05,정상오탐율(%),4.0,data=normal_flight.csv; split=70/30; seed=42; FP=test 이상비율; 탐지=drift별 200회 랜덤 test 샘플 위조 예측
+A3-1_IForest_contamination,IsolationForest,contamination=0.05,1m위조탐지율(%),5.0,data=normal_flight.csv; split=70/30; seed=42; FP=test 이상비율; 탐지=drift별 200회 랜덤 test 샘플 위조 예측
+A3-1_IForest_contamination,IsolationForest,contamination=0.05,5m위조탐지율(%),66.0,data=normal_flight.csv; split=70/30; seed=42; FP=test 이상비율; 탐지=drift별 200회 랜덤 test 샘플 위조 예측
+A3-1_IForest_contamination,IsolationForest,contamination=0.05,10m위조탐지율(%),67.5,data=normal_flight.csv; split=70/30; seed=42; FP=test 이상비율; 탐지=drift별 200회 랜덤 test 샘플 위조 예측
+A3-1_IForest_contamination,IsolationForest,contamination=0.1,정상오탐율(%),8.3,data=normal_flight.csv; split=70/30; seed=42; FP=test 이상비율; 탐지=drift별 200회 랜덤 test 샘플 위조 예측
+A3-1_IForest_contamination,IsolationForest,contamination=0.1,1m위조탐지율(%),11.5,data=normal_flight.csv; split=70/30; seed=42; FP=test 이상비율; 탐지=drift별 200회 랜덤 test 샘플 위조 예측
+A3-1_IForest_contamination,IsolationForest,contamination=0.1,5m위조탐지율(%),100.0,data=normal_flight.csv; split=70/30; seed=42; FP=test 이상비율; 탐지=drift별 200회 랜덤 test 샘플 위조 예측
+A3-1_IForest_contamination,IsolationForest,contamination=0.1,10m위조탐지율(%),100.0,data=normal_flight.csv; split=70/30; seed=42; FP=test 이상비율; 탐지=drift별 200회 랜덤 test 샘플 위조 예측
+A3-1_IForest_contamination,IsolationForest,contamination=0.15,정상오탐율(%),11.0,data=normal_flight.csv; split=70/30; seed=42; FP=test 이상비율; 탐지=drift별 200회 랜덤 test 샘플 위조 예측
+A3-1_IForest_contamination,IsolationForest,contamination=0.15,1m위조탐지율(%),18.0,data=normal_flight.csv; split=70/30; seed=42; FP=test 이상비율; 탐지=drift별 200회 랜덤 test 샘플 위조 예측
+A3-1_IForest_contamination,IsolationForest,contamination=0.15,5m위조탐지율(%),100.0,data=normal_flight.csv; split=70/30; seed=42; FP=test 이상비율; 탐지=drift별 200회 랜덤 test 샘플 위조 예측
+A3-1_IForest_contamination,IsolationForest,contamination=0.15,10m위조탐지율(%),100.0,data=normal_flight.csv; split=70/30; seed=42; FP=test 이상비율; 탐지=drift별 200회 랜덤 test 샘플 위조 예측
+A3-2_CumulativeDrift,CumulativeDriftDetector,"window=15,threshold_m=10.0",탐지여부,탐지,합성 1m/스텝 직선 드리프트(최대 80스텝); 결정적(trial 무관); 탐지=net_drift>threshold
+A3-2_CumulativeDrift,CumulativeDriftDetector,"window=15,threshold_m=10.0",탐지스텝,15,합성 1m/스텝 직선 드리프트(최대 80스텝); 결정적(trial 무관); 탐지=net_drift>threshold
+A3-2_CumulativeDrift,CumulativeDriftDetector,"window=15,threshold_m=15.0",탐지여부,미탐지,합성 1m/스텝 직선 드리프트(최대 80스텝); 결정적(trial 무관); 탐지=net_drift>threshold
+A3-2_CumulativeDrift,CumulativeDriftDetector,"window=15,threshold_m=15.0",탐지스텝,,합성 1m/스텝 직선 드리프트(최대 80스텝); 결정적(trial 무관); 탐지=net_drift>threshold
+A3-2_CumulativeDrift,CumulativeDriftDetector,"window=15,threshold_m=20.0",탐지여부,미탐지,합성 1m/스텝 직선 드리프트(최대 80스텝); 결정적(trial 무관); 탐지=net_drift>threshold
+A3-2_CumulativeDrift,CumulativeDriftDetector,"window=15,threshold_m=20.0",탐지스텝,,합성 1m/스텝 직선 드리프트(최대 80스텝); 결정적(trial 무관); 탐지=net_drift>threshold
+A3-2_CumulativeDrift,CumulativeDriftDetector,"window=15,threshold_m=25.0",탐지여부,미탐지,합성 1m/스텝 직선 드리프트(최대 80스텝); 결정적(trial 무관); 탐지=net_drift>threshold
+A3-2_CumulativeDrift,CumulativeDriftDetector,"window=15,threshold_m=25.0",탐지스텝,,합성 1m/스텝 직선 드리프트(최대 80스텝); 결정적(trial 무관); 탐지=net_drift>threshold
+A3-2_CumulativeDrift,CumulativeDriftDetector,"window=20,threshold_m=10.0",탐지여부,탐지,합성 1m/스텝 직선 드리프트(최대 80스텝); 결정적(trial 무관); 탐지=net_drift>threshold
+A3-2_CumulativeDrift,CumulativeDriftDetector,"window=20,threshold_m=10.0",탐지스텝,20,합성 1m/스텝 직선 드리프트(최대 80스텝); 결정적(trial 무관); 탐지=net_drift>threshold
+A3-2_CumulativeDrift,CumulativeDriftDetector,"window=20,threshold_m=15.0",탐지여부,탐지,합성 1m/스텝 직선 드리프트(최대 80스텝); 결정적(trial 무관); 탐지=net_drift>threshold
+A3-2_CumulativeDrift,CumulativeDriftDetector,"window=20,threshold_m=15.0",탐지스텝,20,합성 1m/스텝 직선 드리프트(최대 80스텝); 결정적(trial 무관); 탐지=net_drift>threshold
+A3-2_CumulativeDrift,CumulativeDriftDetector,"window=20,threshold_m=20.0",탐지여부,미탐지,합성 1m/스텝 직선 드리프트(최대 80스텝); 결정적(trial 무관); 탐지=net_drift>threshold
+A3-2_CumulativeDrift,CumulativeDriftDetector,"window=20,threshold_m=20.0",탐지스텝,,합성 1m/스텝 직선 드리프트(최대 80스텝); 결정적(trial 무관); 탐지=net_drift>threshold
+A3-2_CumulativeDrift,CumulativeDriftDetector,"window=20,threshold_m=25.0",탐지여부,미탐지,합성 1m/스텝 직선 드리프트(최대 80스텝); 결정적(trial 무관); 탐지=net_drift>threshold
+A3-2_CumulativeDrift,CumulativeDriftDetector,"window=20,threshold_m=25.0",탐지스텝,,합성 1m/스텝 직선 드리프트(최대 80스텝); 결정적(trial 무관); 탐지=net_drift>threshold
+A3-2_CumulativeDrift,CumulativeDriftDetector,"window=30,threshold_m=10.0",탐지여부,탐지,합성 1m/스텝 직선 드리프트(최대 80스텝); 결정적(trial 무관); 탐지=net_drift>threshold
+A3-2_CumulativeDrift,CumulativeDriftDetector,"window=30,threshold_m=10.0",탐지스텝,30,합성 1m/스텝 직선 드리프트(최대 80스텝); 결정적(trial 무관); 탐지=net_drift>threshold
+A3-2_CumulativeDrift,CumulativeDriftDetector,"window=30,threshold_m=15.0",탐지여부,탐지,합성 1m/스텝 직선 드리프트(최대 80스텝); 결정적(trial 무관); 탐지=net_drift>threshold
+A3-2_CumulativeDrift,CumulativeDriftDetector,"window=30,threshold_m=15.0",탐지스텝,30,합성 1m/스텝 직선 드리프트(최대 80스텝); 결정적(trial 무관); 탐지=net_drift>threshold
+A3-2_CumulativeDrift,CumulativeDriftDetector,"window=30,threshold_m=20.0",탐지여부,탐지,합성 1m/스텝 직선 드리프트(최대 80스텝); 결정적(trial 무관); 탐지=net_drift>threshold
+A3-2_CumulativeDrift,CumulativeDriftDetector,"window=30,threshold_m=20.0",탐지스텝,30,합성 1m/스텝 직선 드리프트(최대 80스텝); 결정적(trial 무관); 탐지=net_drift>threshold
+A3-2_CumulativeDrift,CumulativeDriftDetector,"window=30,threshold_m=25.0",탐지여부,탐지,합성 1m/스텝 직선 드리프트(최대 80스텝); 결정적(trial 무관); 탐지=net_drift>threshold
+A3-2_CumulativeDrift,CumulativeDriftDetector,"window=30,threshold_m=25.0",탐지스텝,30,합성 1m/스텝 직선 드리프트(최대 80스텝); 결정적(trial 무관); 탐지=net_drift>threshold
+A3-3_AbsoluteDrift,AbsoluteDriftTracker,"abs_threshold_m=15.0,warmup=3",탐지여부,탐지,합성 1m/스텝 직선 드리프트(최대 80스텝); warmup=3; 결정적; 탐지=앵커대비 절대거리>threshold
+A3-3_AbsoluteDrift,AbsoluteDriftTracker,"abs_threshold_m=15.0,warmup=3",탐지스텝,18,합성 1m/스텝 직선 드리프트(최대 80스텝); warmup=3; 결정적; 탐지=앵커대비 절대거리>threshold
+A3-3_AbsoluteDrift,AbsoluteDriftTracker,"abs_threshold_m=20.0,warmup=3",탐지여부,탐지,합성 1m/스텝 직선 드리프트(최대 80스텝); warmup=3; 결정적; 탐지=앵커대비 절대거리>threshold
+A3-3_AbsoluteDrift,AbsoluteDriftTracker,"abs_threshold_m=20.0,warmup=3",탐지스텝,23,합성 1m/스텝 직선 드리프트(최대 80스텝); warmup=3; 결정적; 탐지=앵커대비 절대거리>threshold
+A3-3_AbsoluteDrift,AbsoluteDriftTracker,"abs_threshold_m=25.0,warmup=3",탐지여부,탐지,합성 1m/스텝 직선 드리프트(최대 80스텝); warmup=3; 결정적; 탐지=앵커대비 절대거리>threshold
+A3-3_AbsoluteDrift,AbsoluteDriftTracker,"abs_threshold_m=25.0,warmup=3",탐지스텝,28,합성 1m/스텝 직선 드리프트(최대 80스텝); warmup=3; 결정적; 탐지=앵커대비 절대거리>threshold
+A3-3_AbsoluteDrift,AbsoluteDriftTracker,"abs_threshold_m=30.0,warmup=3",탐지여부,탐지,합성 1m/스텝 직선 드리프트(최대 80스텝); warmup=3; 결정적; 탐지=앵커대비 절대거리>threshold
+A3-3_AbsoluteDrift,AbsoluteDriftTracker,"abs_threshold_m=30.0,warmup=3",탐지스텝,33,합성 1m/스텝 직선 드리프트(최대 80스텝); warmup=3; 결정적; 탐지=앵커대비 절대거리>threshold
+A3-3_AbsoluteDrift,AbsoluteDriftTracker,"abs_threshold_m=40.0,warmup=3",탐지여부,탐지,합성 1m/스텝 직선 드리프트(최대 80스텝); warmup=3; 결정적; 탐지=앵커대비 절대거리>threshold
+A3-3_AbsoluteDrift,AbsoluteDriftTracker,"abs_threshold_m=40.0,warmup=3",탐지스텝,43,합성 1m/스텝 직선 드리프트(최대 80스텝); warmup=3; 결정적; 탐지=앵커대비 절대거리>threshold
+A3-4_SpeedSweep,CumulativeDriftDetector,step_m=0.3,누적_탐지스텝,미탐지,"config 기본값(누적 win=20/thr=15, 절대 thr=25/warmup=3); 속도별 직선 드리프트(최대 120스텝); 결정적"
+A3-4_SpeedSweep,AbsoluteDriftTracker,step_m=0.3,절대_탐지스텝,87,"config 기본값(누적 win=20/thr=15, 절대 thr=25/warmup=3); 속도별 직선 드리프트(최대 120스텝); 결정적"
+A3-4_SpeedSweep,CumulativeDriftDetector,step_m=0.5,누적_탐지스텝,미탐지,"config 기본값(누적 win=20/thr=15, 절대 thr=25/warmup=3); 속도별 직선 드리프트(최대 120스텝); 결정적"
+A3-4_SpeedSweep,AbsoluteDriftTracker,step_m=0.5,절대_탐지스텝,53,"config 기본값(누적 win=20/thr=15, 절대 thr=25/warmup=3); 속도별 직선 드리프트(최대 120스텝); 결정적"
+A3-4_SpeedSweep,CumulativeDriftDetector,step_m=1.0,누적_탐지스텝,20,"config 기본값(누적 win=20/thr=15, 절대 thr=25/warmup=3); 속도별 직선 드리프트(최대 120스텝); 결정적"
+A3-4_SpeedSweep,AbsoluteDriftTracker,step_m=1.0,절대_탐지스텝,28,"config 기본값(누적 win=20/thr=15, 절대 thr=25/warmup=3); 속도별 직선 드리프트(최대 120스텝); 결정적"
+A3-4_SpeedSweep,CumulativeDriftDetector,step_m=2.0,누적_탐지스텝,20,"config 기본값(누적 win=20/thr=15, 절대 thr=25/warmup=3); 속도별 직선 드리프트(최대 120스텝); 결정적"
+A3-4_SpeedSweep,AbsoluteDriftTracker,step_m=2.0,절대_탐지스텝,16,"config 기본값(누적 win=20/thr=15, 절대 thr=25/warmup=3); 속도별 직선 드리프트(최대 120스텝); 결정적"
+A3-4_SpeedSweep,CumulativeDriftDetector,step_m=5.0,누적_탐지스텝,20,"config 기본값(누적 win=20/thr=15, 절대 thr=25/warmup=3); 속도별 직선 드리프트(최대 120스텝); 결정적"
+A3-4_SpeedSweep,AbsoluteDriftTracker,step_m=5.0,절대_탐지스텝,8,"config 기본값(누적 win=20/thr=15, 절대 thr=25/warmup=3); 속도별 직선 드리프트(최대 120스텝); 결정적"
