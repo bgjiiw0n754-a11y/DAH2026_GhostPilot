@@ -1,0 +1,10 @@
+데모 영상 링크 (제출 전 실제 링크로 교체)
+
+YouTube (unlisted): https://youtu.be/YOUR_VIDEO_ID
+Vimeo (unlisted):   https://vimeo.com/YOUR_VIDEO_ID
+
+녹화 내용:
+  터미널 1: SITL 드론 실행 (지도에서 드론 이동)
+  터미널 2: 방어 에이전트 (탐지 로그)
+  터미널 3: 공격 에이전트 (위조 주입)
+  → 공격 시작 후 방어가 탐지·차단하는 장면
