@@ -1,0 +1,34 @@
+{
+  "claim_tested": "route matrix: fc-direct global-position-int",
+  "experiment": "E7_fc-direct_global-position-int",
+  "metrics": {
+    "abrupt_jump_count": 1,
+    "commanded_accel_max_mps2": 4.0,
+    "commanded_accel_min_mps2": 0.0,
+    "commanded_speed_max_mps": 2.000000000000001,
+    "commanded_speed_min_mps": 1.9999999999999984,
+    "fence_breach_count": 0,
+    "fence_breach_observed": false,
+    "final_official_drift_m": 0.0,
+    "final_target_drift_m": 7.991010253192881,
+    "global_position_available": true,
+    "gps_fix_stability": 0.9764705882352941,
+    "gps_raw_available": true,
+    "max_target_error_m": 7.991010253192881,
+    "mean_target_drift_m": 5.671039687133543,
+    "mean_target_error_m": 5.671039687133543,
+    "observed_count": 31,
+    "reflected_count": 0,
+    "reflection_rate": 0.0
+  },
+  "not_claimed": [
+    "remote exploit",
+    "credential bypass",
+    "RF GNSS spoofing",
+    "RF jamming",
+    "MAVLink signing bypass",
+    "mission takeover before E6 pass"
+  ],
+  "reason": "reflection_rate < 0.70; final official drift below 60 percent of target; mean target error too high",
+  "verdict": "fail"
+}

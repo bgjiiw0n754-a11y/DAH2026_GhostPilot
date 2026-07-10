@@ -1,0 +1,20 @@
+{
+  "claim_tested": "route/message reflection matrix",
+  "experiment": "E7_route_matrix",
+  "metrics": {
+    "cells": 9,
+    "global_position_int_pass_cells": 0,
+    "gps_input_pass_cells": 3,
+    "hil_gps_pass_cells": 0
+  },
+  "not_claimed": [
+    "remote exploit",
+    "credential bypass",
+    "RF GNSS spoofing",
+    "RF jamming",
+    "MAVLink signing bypass",
+    "mission takeover before E6 pass"
+  ],
+  "reason": "route matrix captured; GPS_INPUT reflection is route-dependent",
+  "verdict": "pass"
+}

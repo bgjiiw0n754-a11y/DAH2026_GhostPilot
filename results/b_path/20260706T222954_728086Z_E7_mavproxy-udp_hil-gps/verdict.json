@@ -1,0 +1,34 @@
+{
+  "claim_tested": "route matrix: mavproxy-udp hil-gps",
+  "experiment": "E7_mavproxy-udp_hil-gps",
+  "metrics": {
+    "abrupt_jump_count": 1,
+    "commanded_accel_max_mps2": 4.0,
+    "commanded_accel_min_mps2": 0.0,
+    "commanded_speed_max_mps": 2.000000000000001,
+    "commanded_speed_min_mps": 1.9999999999999984,
+    "fence_breach_count": 0,
+    "fence_breach_observed": false,
+    "final_official_drift_m": 13173877.35106569,
+    "final_target_drift_m": 7.991010253192881,
+    "global_position_available": true,
+    "gps_fix_stability": 0.7368421052631579,
+    "gps_raw_available": true,
+    "max_target_error_m": 13173880.128915977,
+    "mean_target_drift_m": 5.458145552181965,
+    "mean_target_error_m": 4704959.793111882,
+    "observed_count": 28,
+    "reflected_count": 0,
+    "reflection_rate": 0.0
+  },
+  "not_claimed": [
+    "remote exploit",
+    "credential bypass",
+    "RF GNSS spoofing",
+    "RF jamming",
+    "MAVLink signing bypass",
+    "mission takeover before E6 pass"
+  ],
+  "reason": "reflection_rate < 0.70; mean target error too high",
+  "verdict": "fail"
+}
