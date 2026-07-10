@@ -1,0 +1,14 @@
+{
+  "ARMING_CHECK": null,
+  "FENCE_ACTION": 0.0,
+  "FENCE_ENABLE": 1.0,
+  "FENCE_MARGIN": 1.0,
+  "FENCE_RADIUS": 10.0,
+  "FENCE_TYPE": 3.0,
+  "GPS1_TYPE": 14.0,
+  "GPS_TYPE": null,
+  "MIS_RESTART": 0.0,
+  "SIM_GPS1_ENABLE": 1.0,
+  "WPNAV_SPEED": null,
+  "WP_SPD": 2.5
+}

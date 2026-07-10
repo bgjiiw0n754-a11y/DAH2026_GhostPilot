@@ -1,0 +1,13 @@
+payload,route,variant,impact_type,impact_confirmed,decision_signal,mode,mission_seq,parameter,before,after,notes
+mode-command,fc-direct,RTL,mode-change,1,HEARTBEAT.mode=RTL,RTL,,,,,HEARTBEAT mode changed to RTL
+mode-command,fc-direct,LAND,mode-change,1,HEARTBEAT.mode=LAND,LAND,,,,,HEARTBEAT mode changed to LAND
+mode-command,fc-direct,BRAKE,mode-change,1,HEARTBEAT.mode=BRAKE,BRAKE,,,,,HEARTBEAT mode changed to BRAKE
+mode-command,fc-direct,LOITER,mode-change,1,HEARTBEAT.mode=LOITER,LOITER,,,,,HEARTBEAT mode changed to LOITER
+mode-command,mavproxy-udp,RTL,mode-change,1,HEARTBEAT.mode=RTL,RTL,,,,,HEARTBEAT mode changed to RTL
+mode-command,mavproxy-udp,LAND,mode-change,1,HEARTBEAT.mode=LAND,LAND,,,,,HEARTBEAT mode changed to LAND
+mode-command,mavproxy-udp,BRAKE,mode-change,1,HEARTBEAT.mode=BRAKE,BRAKE,,,,,HEARTBEAT mode changed to BRAKE
+mode-command,mavproxy-udp,LOITER,mode-change,1,HEARTBEAT.mode=LOITER,LOITER,,,,,HEARTBEAT mode changed to LOITER
+mode-command,companion,RTL,mode-change,1,HEARTBEAT.mode=RTL,RTL,,,,,HEARTBEAT mode changed to RTL
+mode-command,companion,LAND,mode-change,1,HEARTBEAT.mode=LAND,LAND,,,,,HEARTBEAT mode changed to LAND
+mode-command,companion,BRAKE,mode-change,1,HEARTBEAT.mode=BRAKE,BRAKE,,,,,HEARTBEAT mode changed to BRAKE
+mode-command,companion,LOITER,mode-change,1,HEARTBEAT.mode=LOITER,LOITER,,,,,HEARTBEAT mode changed to LOITER

@@ -1,0 +1,2 @@
+payload,route,required_access,required_state,required_params,blocked_reason,not_claimed
+telemetry-deception,fc-direct,MAVLink access to output/telemetry path,GCS/log consumer accepts unauthenticated or competing status messages,none for FC input; this is not GPS spoofing,,remote exploit; credential bypass; RF GNSS spoofing; RF jamming; MAVLink signing bypass; real vehicle takeover; full mission takeover

@@ -1,0 +1,2 @@
+payload,route,variant,impact_type,impact_confirmed,decision_signal,mode,mission_seq,parameter,before,after,notes
+mission-edit,fc-direct,single-waypoint-upload,mission-upload,1,MISSION_ACK/readback,,0,,,,mission upload ACK/readback confirmed

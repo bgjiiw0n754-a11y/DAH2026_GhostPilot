@@ -1,0 +1,2 @@
+payload,route,required_access,required_state,required_params,blocked_reason,not_claimed
+mission-edit,fc-direct,MAVLink write access to mission protocol,FC accepts mission upload; AUTO observation optional,ARMING_CHECK may need relaxation for AUTO observation in SITL,,remote exploit; credential bypass; RF GNSS spoofing; RF jamming; MAVLink signing bypass; real vehicle takeover; full mission takeover

@@ -1,0 +1,2 @@
+payload,route,variant,impact_type,impact_confirmed,decision_signal,mode,mission_seq,parameter,before,after,notes
+telemetry-deception,fc-direct,GLOBAL_POSITION_INT,telemetry-only,1,negative FC reflection control,,,,,,FC navigation input did not follow injected GLOBAL_POSITION_INT

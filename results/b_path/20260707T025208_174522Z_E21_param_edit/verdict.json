@@ -1,0 +1,53 @@
+{
+  "claim_tested": "MAVLink parameter-edit payload",
+  "experiment": "E21_param_edit",
+  "metrics": {
+    "param_results": {
+      "FENCE_ACTION": {
+        "after": 1.0,
+        "before": 0.0,
+        "readback_ok": true,
+        "set_ok": true,
+        "target": 1.0
+      },
+      "FENCE_RADIUS": {
+        "after": 12.0,
+        "before": 10.0,
+        "readback_ok": true,
+        "set_ok": true,
+        "target": 12.0
+      },
+      "FS_EKF_ACTION": {
+        "after": 1.0,
+        "before": 0.0,
+        "readback_ok": true,
+        "set_ok": true,
+        "target": 1.0
+      },
+      "WP_SPD": {
+        "after": 4.0,
+        "before": 2.5,
+        "readback_ok": true,
+        "set_ok": true,
+        "target": 4.0
+      }
+    },
+    "required_params": [
+      "FENCE_RADIUS",
+      "FENCE_ACTION",
+      "WP_SPD"
+    ],
+    "selected_speed_param": "WP_SPD"
+  },
+  "not_claimed": [
+    "remote exploit",
+    "credential bypass",
+    "RF GNSS spoofing",
+    "RF jamming",
+    "MAVLink signing bypass",
+    "real vehicle takeover",
+    "full mission takeover"
+  ],
+  "reason": "4/4 parameter changes confirmed; speed_param=WP_SPD",
+  "verdict": "pass"
+}
