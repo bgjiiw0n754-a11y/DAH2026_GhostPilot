@@ -1,0 +1,244 @@
+{
+  "classification": "adaptive geofence-deception payload",
+  "source_bundles": {
+    "E7": "/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260706T222750_745673Z_E7_route_matrix",
+    "E8": "/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260706T223735_241593Z_E8_adaptive_geofence",
+    "E9": "/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260706T223941_086117Z_E9_auto_waypoint_reach"
+  },
+  "verdict": {
+    "claim_tested": "advanced B-path claim summary",
+    "experiment": "E10_summary",
+    "metrics": {
+      "source_verdicts": {
+        "E7": {
+          "bundle": "/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260706T222750_745673Z_E7_route_matrix",
+          "verdict": {
+            "claim_tested": "route/message reflection matrix",
+            "experiment": "E7_route_matrix",
+            "metrics": {
+              "cells": 9,
+              "global_position_int_pass_cells": 0,
+              "gps_input_pass_cells": 3,
+              "hil_gps_pass_cells": 0
+            },
+            "not_claimed": [
+              "remote exploit",
+              "credential bypass",
+              "RF GNSS spoofing",
+              "RF jamming",
+              "MAVLink signing bypass",
+              "mission takeover before E6 pass"
+            ],
+            "reason": "route matrix captured; GPS_INPUT reflection is route-dependent",
+            "verdict": "pass"
+          }
+        },
+        "E8": {
+          "bundle": "/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260706T223735_241593Z_E8_adaptive_geofence",
+          "verdict": {
+            "claim_tested": "adaptive minimum-drift geofence deception",
+            "experiment": "E8_adaptive_geofence",
+            "metrics": {
+              "adaptive": {
+                "abrupt_jump_count": 0,
+                "adaptive_iterations": 22,
+                "commanded_accel_max_mps2": 1.0,
+                "commanded_accel_min_mps2": 0.0,
+                "commanded_speed_max_mps": 2.5,
+                "commanded_speed_min_mps": 0.0,
+                "decision_changed": true,
+                "fence_breach_count": 273,
+                "fence_breach_observed": true,
+                "final_official_drift_m": 21.214130293322267,
+                "final_target_drift_m": 21.226114990280937,
+                "global_position_available": true,
+                "gps_fix_stability": 1.0,
+                "gps_raw_available": true,
+                "last_non_breach_drift_m": 17.480331389220623,
+                "max_target_error_m": 0.5057632504483797,
+                "mean_target_drift_m": 15.212049943296002,
+                "mean_target_error_m": 0.01392123468988057,
+                "minimum_breach_drift_m": 18.728925989825,
+                "observed_count": 96,
+                "reflected_count": 94,
+                "reflection_rate": 0.9791666666666666
+              },
+              "baseline": {
+                "abrupt_jump_count": 0,
+                "commanded_accel_max_mps2": 0.0,
+                "commanded_accel_min_mps2": 0.0,
+                "commanded_speed_max_mps": 0.0,
+                "commanded_speed_min_mps": 0.0,
+                "decision_changed": false,
+                "fence_breach_count": 0,
+                "fence_breach_observed": false,
+                "final_official_drift_m": 0.0,
+                "final_target_drift_m": 0.0,
+                "global_position_available": false,
+                "gps_fix_stability": 1.0,
+                "gps_raw_available": true,
+                "max_target_error_m": 0.0,
+                "mean_target_drift_m": 0.0,
+                "mean_target_error_m": 0.0,
+                "observed_count": 0,
+                "reflected_count": 0,
+                "reflection_rate": 0.0
+              },
+              "linear": {
+                "abrupt_jump_count": 1,
+                "commanded_accel_max_mps2": 4.0,
+                "commanded_accel_min_mps2": 0.0,
+                "commanded_speed_max_mps": 2.0000000000000058,
+                "commanded_speed_min_mps": 1.999999999999996,
+                "decision_change_time_s": 12.906787395477295,
+                "decision_changed": true,
+                "drift_at_decision_m": 14.983141990379494,
+                "fence_breach_count": 263,
+                "fence_breach_observed": true,
+                "final_official_drift_m": 29.960849805253005,
+                "final_target_drift_m": 29.96627439737855,
+                "global_position_available": true,
+                "gps_fix_stability": 1.0,
+                "gps_raw_available": true,
+                "max_target_error_m": 1.0075535597590557,
+                "mean_target_drift_m": 14.673144419875008,
+                "mean_target_error_m": 0.04177066440877489,
+                "observed_count": 87,
+                "reflected_count": 87,
+                "reflection_rate": 1.0
+              }
+            },
+            "not_claimed": [
+              "remote exploit",
+              "credential bypass",
+              "RF GNSS spoofing",
+              "RF jamming",
+              "MAVLink signing bypass",
+              "mission takeover before E6 pass"
+            ],
+            "reason": "adaptive payload found a lower-drift geofence breach than linear final drift",
+            "verdict": "pass"
+          }
+        },
+        "E9": {
+          "bundle": "/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260706T223941_086117Z_E9_auto_waypoint_reach",
+          "verdict": {
+            "claim_tested": "AUTO waypoint mission-current decision under GPS_INPUT",
+            "experiment": "E9_auto_waypoint_reach",
+            "metrics": {
+              "adaptive": {
+                "abrupt_jump_count": 0,
+                "commanded_accel_max_mps2": 2.0,
+                "commanded_accel_min_mps2": 0.0,
+                "commanded_speed_max_mps": 2.5,
+                "commanded_speed_min_mps": 0.5,
+                "decision_changed": false,
+                "fence_breach_count": 348,
+                "fence_breach_observed": true,
+                "final_official_drift_m": 31.12528351066676,
+                "final_target_drift_m": 29.96627439737855,
+                "global_position_available": true,
+                "gps_fix_stability": 1.0,
+                "gps_raw_available": true,
+                "max_target_error_m": 2.874743376187317,
+                "mean_target_drift_m": 15.738926897741734,
+                "mean_target_error_m": 0.3672982371325055,
+                "mission_advance_time_s": 0.0,
+                "observed_count": 113,
+                "reflected_count": 110,
+                "reflection_rate": 0.9734513274336283
+              },
+              "baseline": {
+                "abrupt_jump_count": 0,
+                "commanded_accel_max_mps2": 0.0,
+                "commanded_accel_min_mps2": 0.0,
+                "commanded_speed_max_mps": 0.0,
+                "commanded_speed_min_mps": 0.0,
+                "decision_changed": false,
+                "fence_breach_count": 0,
+                "fence_breach_observed": false,
+                "final_official_drift_m": 0.0,
+                "final_target_drift_m": 0.0,
+                "global_position_available": false,
+                "gps_fix_stability": 1.0,
+                "gps_raw_available": true,
+                "max_target_error_m": 0.0,
+                "mean_target_drift_m": 0.0,
+                "mean_target_error_m": 0.0,
+                "mission_advance_time_s": 0.0,
+                "observed_count": 0,
+                "reflected_count": 0,
+                "reflection_rate": 0.0
+              },
+              "ekf_smooth": {
+                "abrupt_jump_count": 0,
+                "commanded_accel_max_mps2": 1.0799999999999998,
+                "commanded_accel_min_mps2": 7.944109290391274e-15,
+                "commanded_speed_max_mps": 2.990000000000002,
+                "commanded_speed_min_mps": 0.29000000000000004,
+                "decision_changed": false,
+                "fence_breach_count": 146,
+                "fence_breach_observed": true,
+                "final_official_drift_m": 19.969749120337383,
+                "final_target_drift_m": 19.97752052332556,
+                "global_position_available": true,
+                "gps_fix_stability": 1.0,
+                "gps_raw_available": true,
+                "max_target_error_m": 1.4972055082040965,
+                "mean_target_drift_m": 9.298954092241429,
+                "mean_target_error_m": 0.03827467519680499,
+                "mission_advance_time_s": 0.0,
+                "observed_count": 60,
+                "reflected_count": 50,
+                "reflection_rate": 0.8333333333333334
+              },
+              "linear": {
+                "abrupt_jump_count": 1,
+                "commanded_accel_max_mps2": 4.0,
+                "commanded_accel_min_mps2": 0.0,
+                "commanded_speed_max_mps": 2.000000000000001,
+                "commanded_speed_min_mps": 1.999999999999996,
+                "decision_changed": false,
+                "fence_breach_count": 81,
+                "fence_breach_observed": true,
+                "final_official_drift_m": 19.969749120337383,
+                "final_target_drift_m": 19.97752052332556,
+                "global_position_available": true,
+                "gps_fix_stability": 1.0,
+                "gps_raw_available": true,
+                "max_target_error_m": 1.002761984879552,
+                "mean_target_drift_m": 10.516469754195793,
+                "mean_target_error_m": 0.026193744661086895,
+                "mission_advance_time_s": 0.0,
+                "observed_count": 53,
+                "reflected_count": 53,
+                "reflection_rate": 1.0
+              }
+            },
+            "not_claimed": [
+              "remote exploit",
+              "credential bypass",
+              "RF GNSS spoofing",
+              "RF jamming",
+              "MAVLink signing bypass",
+              "mission takeover before E6 pass"
+            ],
+            "reason": "AUTO waypoint mission-current did not advance earlier under GPS_INPUT",
+            "verdict": "fail"
+          }
+        }
+      }
+    },
+    "not_claimed": [
+      "remote exploit",
+      "credential bypass",
+      "RF GNSS spoofing",
+      "RF jamming",
+      "MAVLink signing bypass",
+      "real vehicle takeover",
+      "full mission takeover"
+    ],
+    "reason": "adaptive geofence-deception payload",
+    "verdict": "pass"
+  }
+}

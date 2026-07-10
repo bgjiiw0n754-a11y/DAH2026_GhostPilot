@@ -1,0 +1,1 @@
+timestamp,experiment,case,event_type,elapsed_s,sample_index,target_drift_m,official_drift_m,mode,mission_seq,fence_breach_status,status_text,evidence_message_type

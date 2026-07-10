@@ -1,0 +1,8 @@
+timestamp,experiment,case,event_type,elapsed_s,sample_index,target_drift_m,official_drift_m,mode,mission_seq,fence_breach_status,status_text,evidence_message_type
+2026-07-06T22:38:36.415260+00:00,E8_adaptive_geofence,linear,fence_breach,12.906787395477295,15,14.983141990379494,,STABILIZE,0,1,Field Elevation Set: 20m,FENCE_STATUS
+2026-07-06T22:39:17.303212+00:00,E8_adaptive_geofence,adaptive,fence_breach,13.948685646057129,17,18.728925989825,,STABILIZE,0,1,Field Elevation Set: 20m,FENCE_STATUS
+2026-07-06T22:39:17.927272+00:00,E8_adaptive_geofence,adaptive,fence_breach,14.572757720947266,18,19.727801622769324,,STABILIZE,0,1,Field Elevation Set: 20m,HEARTBEAT
+2026-07-06T22:39:19.927531+00:00,E8_adaptive_geofence,adaptive,fence_breach,16.573011875152588,19,20.4769583187826,,STABILIZE,0,1,Field Elevation Set: 20m,HEARTBEAT
+2026-07-06T22:39:21.928070+00:00,E8_adaptive_geofence,adaptive,fence_breach,18.573540210723877,20,20.97639610303374,20.47064696942017,STABILIZE,0,1,Field Elevation Set: 20m,GLOBAL_POSITION_INT
+2026-07-06T22:39:23.928394+00:00,E8_adaptive_geofence,adaptive,fence_breach,20.573857307434082,21,21.226114990280937,,STABILIZE,0,1,Field Elevation Set: 20m,GPS_RAW_INT
+2026-07-06T22:39:25.928887+00:00,E8_adaptive_geofence,adaptive,fence_breach,22.574350833892822,22,21.226114990280937,,STABILIZE,0,1,PreArm: Vehicle breaching Circle fence,GPS_RAW_INT
