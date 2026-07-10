@@ -1,0 +1,2 @@
+timestamp,experiment,case,event_type,elapsed_s,sample_index,target_drift_m,official_drift_m,mode,mission_seq,fence_breach_status,status_text,evidence_message_type
+2026-07-07T01:16:30.872212+00:00,E14_auto_attack_planner,auto_selected_stealth_opt,fence_breach,14.007110118865967,23,23.95304507599846,23.947109086812972,STABILIZE,0,,Field Elevation Set: 20m,FENCE_STATUS

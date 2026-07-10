@@ -1,0 +1,64 @@
+{
+  "max_drift_m": 30.0,
+  "message": "GPS_INPUT",
+  "not_claimed": [
+    "remote exploit",
+    "credential bypass",
+    "MAVLink signing bypass",
+    "RF GNSS spoofing",
+    "RF jamming",
+    "real vehicle takeover"
+  ],
+  "objective": "geofence",
+  "planner_trace": [
+    {
+      "available": 1,
+      "expected_cost": 0.25,
+      "expected_impact": 0.95,
+      "objective": "geofence",
+      "reason": "fence parameters available",
+      "score": 0.7,
+      "selected": 1
+    },
+    {
+      "available": 1,
+      "expected_cost": 0.45,
+      "expected_impact": 0.7,
+      "objective": "auto-waypoint",
+      "reason": "single waypoint mission can be uploaded in SITL",
+      "score": 0.24999999999999994,
+      "selected": 0
+    },
+    {
+      "available": 1,
+      "expected_cost": 0.55,
+      "expected_impact": 0.55,
+      "objective": "rtl",
+      "reason": "RTL requires mode change evidence after position event",
+      "score": 0.0,
+      "selected": 0
+    },
+    {
+      "available": 1,
+      "expected_cost": 0.6,
+      "expected_impact": 0.45,
+      "objective": "land",
+      "reason": "LAND evidence is mode/status dependent",
+      "score": -0.14999999999999997,
+      "selected": 0
+    },
+    {
+      "available": 1,
+      "expected_cost": 0.75,
+      "expected_impact": 0.35,
+      "objective": "failsafe",
+      "reason": "failsafe evidence is noisy and may not trigger under bounded GPS_INPUT",
+      "score": -0.4,
+      "selected": 0
+    }
+  ],
+  "profile": "stealth-opt",
+  "route": "fc-direct",
+  "scope": "authorized local ArduPilot SITL post-access payload only",
+  "stealth_budget": "normal"
+}

@@ -1,0 +1,2 @@
+objective,profile,route,decision_changed,stealth_budget,stealth_score,constraint_violations,final_target_drift_m,final_official_drift_m,mean_target_error_m,commanded_speed_max_mps,commanded_accel_max_mps2,abrupt_jump_count,gps_fix_stability,verdict,reason,bundle
+geofence,stealth-opt,fc-direct,1,normal,0.479061,1,23.95304507599846,23.947109086812972,0.0673933902183796,2.5000000000000027,0.7466666666666666,0,1.0,pass,planner-selected profile metrics,

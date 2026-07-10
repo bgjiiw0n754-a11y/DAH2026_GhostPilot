@@ -1,0 +1,5 @@
+objective,best_route,best_profile,verdict,decision_changed,decision_time_s,minimum_drift_m,stealth_score,source_bundle
+auto-waypoint,fc-direct,stealth-opt,fail,0,0.0,0.0,0.623898,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T010445_557499Z_E11_mission_decision_matrix
+rtl,fc-direct,stealth-opt,fail,0,0.0,0.0,0.623898,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T010445_557499Z_E11_mission_decision_matrix
+land,fc-direct,stealth-opt,fail,0,0.0,0.0,0.623898,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T010445_557499Z_E11_mission_decision_matrix
+failsafe,fc-direct,stealth-opt,fail,0,0.0,0.0,4391298.280848,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T010445_557499Z_E11_mission_decision_matrix

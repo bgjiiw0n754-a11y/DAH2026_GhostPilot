@@ -1,0 +1,22 @@
+{
+  "claim_tested": "automatic result-bounded claim classification",
+  "experiment": "E16_claim_classifier",
+  "metrics": {
+    "geofence_success": true,
+    "latest_E13": "/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T011423_872299Z_E13_route_relaxation",
+    "latest_E15": "/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T011642_237696Z_E15_mission_impact_full_run",
+    "non_geofence_success": false,
+    "route_flexible_success": true
+  },
+  "not_claimed": [
+    "remote exploit",
+    "credential bypass",
+    "RF GNSS spoofing",
+    "RF jamming",
+    "MAVLink signing bypass",
+    "real vehicle takeover",
+    "full mission takeover"
+  ],
+  "reason": "adaptive geofence-deception payload",
+  "verdict": "pass"
+}

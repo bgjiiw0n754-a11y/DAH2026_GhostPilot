@@ -1,0 +1,91 @@
+{
+  "claim_tested": "full mission-impact matrix synthesis",
+  "experiment": "E15_mission_impact_full_run",
+  "metrics": {
+    "best_attacks": [
+      {
+        "best_profile": "stealth-opt",
+        "best_route": "fc-direct",
+        "decision_changed": "1",
+        "decision_time_s": "13.79110836982727",
+        "minimum_drift_m": "23.947109086812972",
+        "objective": "geofence",
+        "source_bundle": "/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T010445_557499Z_E11_mission_decision_matrix",
+        "stealth_score": "0.479061",
+        "verdict": "pass"
+      },
+      {
+        "best_profile": "stealth-opt",
+        "best_route": "fc-direct",
+        "decision_changed": "1",
+        "decision_time_s": 0.0,
+        "minimum_drift_m": "23.95304507599846",
+        "objective": "geofence",
+        "source_bundle": "/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T011423_872299Z_E13_route_relaxation",
+        "stealth_score": "0.479061",
+        "verdict": "pass"
+      },
+      {
+        "best_profile": "stealth-opt",
+        "best_route": "mavproxy-udp",
+        "decision_changed": "1",
+        "decision_time_s": 0.0,
+        "minimum_drift_m": "23.95304507599846",
+        "objective": "geofence",
+        "source_bundle": "/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T011423_872299Z_E13_route_relaxation",
+        "stealth_score": "0.479061",
+        "verdict": "pass"
+      },
+      {
+        "best_profile": "stealth-opt",
+        "best_route": "companion",
+        "decision_changed": "1",
+        "decision_time_s": 0.0,
+        "minimum_drift_m": "23.95304507599846",
+        "objective": "geofence",
+        "source_bundle": "/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T011423_872299Z_E13_route_relaxation",
+        "stealth_score": "0.479061",
+        "verdict": "pass"
+      },
+      {
+        "best_profile": "stealth-opt",
+        "best_route": "fc-direct",
+        "decision_changed": "1",
+        "decision_time_s": "14.007110118865967",
+        "minimum_drift_m": "23.947109086812972",
+        "objective": "geofence",
+        "source_bundle": "/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T011607_827891Z_E14_auto_attack_planner",
+        "stealth_score": "0.479061",
+        "verdict": "pass"
+      },
+      {
+        "best_profile": "stealth-opt",
+        "best_route": "fc-direct",
+        "decision_changed": "1",
+        "decision_time_s": 0.0,
+        "minimum_drift_m": "23.95304507599846",
+        "objective": "geofence",
+        "source_bundle": "/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T011607_827891Z_E14_auto_attack_planner",
+        "stealth_score": "0.479061",
+        "verdict": "pass"
+      }
+    ],
+    "source_bundles": {
+      "E11": "/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T010445_557499Z_E11_mission_decision_matrix",
+      "E12": "/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T011205_772112Z_E12_stealth_optimizer",
+      "E13": "/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T011423_872299Z_E13_route_relaxation",
+      "E14": "/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T011607_827891Z_E14_auto_attack_planner"
+    }
+  },
+  "not_claimed": [
+    "remote exploit",
+    "credential bypass",
+    "RF GNSS spoofing",
+    "RF jamming",
+    "MAVLink signing bypass",
+    "real vehicle takeover",
+    "full mission takeover"
+  ],
+  "reason": "full matrix remains geofence-only or failed",
+  "verdict": "fail"
+}

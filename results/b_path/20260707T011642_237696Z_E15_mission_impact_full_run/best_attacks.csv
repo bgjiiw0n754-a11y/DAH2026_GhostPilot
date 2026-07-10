@@ -1,0 +1,7 @@
+objective,best_route,best_profile,verdict,decision_changed,decision_time_s,minimum_drift_m,stealth_score,source_bundle
+geofence,fc-direct,stealth-opt,pass,1,13.79110836982727,23.947109086812972,0.479061,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T010445_557499Z_E11_mission_decision_matrix
+geofence,fc-direct,stealth-opt,pass,1,0.0,23.95304507599846,0.479061,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T011423_872299Z_E13_route_relaxation
+geofence,mavproxy-udp,stealth-opt,pass,1,0.0,23.95304507599846,0.479061,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T011423_872299Z_E13_route_relaxation
+geofence,companion,stealth-opt,pass,1,0.0,23.95304507599846,0.479061,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T011423_872299Z_E13_route_relaxation
+geofence,fc-direct,stealth-opt,pass,1,14.007110118865967,23.947109086812972,0.479061,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T011607_827891Z_E14_auto_attack_planner
+geofence,fc-direct,stealth-opt,pass,1,0.0,23.95304507599846,0.479061,/home/user/ai-folder/contest-DAH/DAH2026_GhostPilot/DAH2026_GhostPilot/results/b_path/20260707T011607_827891Z_E14_auto_attack_planner

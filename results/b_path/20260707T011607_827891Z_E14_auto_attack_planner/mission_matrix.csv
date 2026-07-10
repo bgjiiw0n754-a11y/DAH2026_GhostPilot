@@ -1,0 +1,2 @@
+objective,case,verdict,reason,decision_changed,event_type,decision_time_s,drift_at_decision_m,minimum_drift_m,reflection_rate,stealth_score,route,profile,bundle
+geofence,auto_selected_stealth_opt,pass,planner selected and executed objective,1,fence_breach,14.007110118865967,0.0,23.947109086812972,0.9032258064516129,0.479061,fc-direct,stealth-opt,
